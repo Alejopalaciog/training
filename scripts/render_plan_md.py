@@ -25,6 +25,8 @@ w(f"**Volumen total:** {sum(s['km'] for s in d['semanas'])} km · **Pico semanal
 w("""
 ## Cómo leer este plan
 
+- **Cada fila te dice exactamente qué corres cada día.** Los kilómetros de lunes, jueves y domingo son rodajes fáciles: sales, corres esa distancia en zona 2 y ya. El miércoles es la única sesión dura de la semana. El viernes no se corre.
+- **¿No entiendes un término?** Umbral, RM, rectas, fartlek, cuestas, VO2max: todo está explicado en el [documento 07 · Glosario](07-glosario.md).
 - **Los rodajes largos están en TIEMPO, no en distancia.** Es deliberado. Pasar de 3 h 15 min corriendo tiene un coste de recuperación y un riesgo de lesión que no compensa el beneficio adicional, y a 83 kg eso te aplica el doble. La distancia entre paréntesis es la estimación a tu ritmo previsto; si vas más lento, corres menos km — y está bien.
 - **Los km semanales son un objetivo, no un contrato.** ±10% es cumplimiento perfecto.
 - **RM = ritmo maratón.** Sale de la tabla de ritmos (documento 02), y se reindexa después de cada test.
@@ -60,14 +62,17 @@ for s in d["semanas"]:
         fase_actual = s["fase"]
         titulo, rango, desc = FASES[fase_actual]
         w(f"\n## {titulo}\n\n*{rango}*\n\n{desc}\n")
-        w("\n| Sem | Fechas | km | Rodaje largo | Sesión de calidad (miércoles) | Foco de la semana |")
-        w("|---|---|---|---|---|---|")
+        w("\n| Sem | Fechas | Total | Lun · fácil | **Mié · sesión de calidad** | Jue · fácil | **Sáb · rodaje largo** | Dom · regenerativo |")
+        w("|---|---|---|---|---|---|---|---|")
+    d = s["dias"]
     if s["largo_min"]:
         h, m = divmod(s["largo_min"], 60)
         t = f"**{h}h{m:02d}**" if m else f"**{h}h**"
+        largo = f'{t} · ~{d["sab"]:g} km<br><small>{s["largo_desc"]}</small>'
     else:
-        t = "**42,195 km**"
-    w(f"| {s['semana']} | {s['etiqueta']} | {s['km']} | {t}<br><small>{s['largo_desc']}</small> | {s['calidad']} | {s['foco']} |")
+        largo = f'**42,195 km**<br><small>{s["largo_desc"]}</small>'
+    dom = f'{d["dom"]:g} km' if d["dom"] else "descanso"
+    w(f"| **{s['semana']}** | {s['etiqueta']} | {s['km']} | {d['lun']:g} km | {s['calidad']}<br><small>total con calentamiento: ~{d['mie']:g} km</small> | {d['jue']:g} km | {largo} | {dom} |")
 
 w("""
 

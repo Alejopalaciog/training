@@ -1,0 +1,11 @@
+{
+  "name": "plan-maraton",
+  "private": true,
+  "type": "module",
+  "description": "Plan de maraton de 26 semanas: generadores de calendario, pagina HTML y PDF",
+  "scripts": {
+    "plan": "python3 scripts/generar_plan.py && python3 scripts/render_plan_md.py && python3 scripts/build_artifact.py",
+    "pdf": "node scripts/generar_pdf.mjs"
+  },
+  "devDependencies": { "playwright": "^1.49.0" }
+}

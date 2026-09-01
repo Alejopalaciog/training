@@ -103,7 +103,14 @@ tbody tr:last-child td{border-bottom:0}
 td .num,td.km,td.wk b{font-family:var(--m);font-variant-numeric:tabular-nums}
 
 /* tabla de 26 semanas */
-.weeks{min-width:760px}
+.weeks{min-width:940px}
+.weeks .ez{text-align:center;font-family:var(--m);font-variant-numeric:tabular-nums;font-size:.85rem;
+  color:var(--soft);width:1%;white-space:nowrap;background:color-mix(in srgb,var(--sunk) 45%,transparent)}
+.weeks .ez .off{color:var(--faint)}
+.weeks .qty span{display:block;font-size:.7rem;color:var(--faint);margin-top:2px;font-family:var(--m)}
+.weeks .qty span.pill{display:inline-block;width:auto;font-family:var(--d);font-size:.6rem;color:var(--paper);margin-top:0}
+.weeks .lng{white-space:nowrap}
+.weeks thead .dayh{text-align:center}
 .weeks td{font-family:var(--b);font-size:.83rem;line-height:1.45}
 .weeks .phasehead th{background:var(--sunk);border-top:1px solid var(--line);border-bottom:1px solid var(--line);
   padding:10px 12px;position:static}
@@ -125,8 +132,8 @@ td .num,td.km,td.wk b{font-family:var(--m);font-variant-numeric:tabular-nums}
 .weeks .km b{font-size:1.02rem;font-weight:600}
 .weeks .km::after{content:' km';font-family:var(--b);font-size:.68rem;color:var(--faint)}
 .weeks .lng b{font-family:var(--m);font-size:.9rem;font-weight:600}
-.weeks .qty{max-width:24ch;color:var(--soft)}
-.weeks .fcs{max-width:32ch}
+.weeks .qty{min-width:20ch;color:var(--ink)}
+
 .pill{display:inline-block;font-family:var(--d);font-size:.6rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
   background:var(--accent);color:var(--paper);padding:2px 7px;margin-right:7px;vertical-align:1px}
 
@@ -141,8 +148,11 @@ td .num,td.km,td.wk b{font-family:var(--m);font-variant-numeric:tabular-nums}
 .pace td{font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
 .pace td:first-child{text-align:left;font-weight:600}
 .pace tr.hi td{background:var(--accent-soft);font-weight:600}
-.pace tr.hi td:first-child::after{content:' ← objetivo';font-family:var(--d);font-size:.6rem;letter-spacing:.08em;
+.pace tr.hi td:first-child::after{content:' ← objetivo marzo';font-family:var(--d);font-size:.6rem;letter-spacing:.08em;
   text-transform:uppercase;color:var(--accent);font-weight:700}
+.pace tr.now td{background:color-mix(in srgb,var(--clay) 12%,transparent)}
+.pace tr.now td:first-child::after{content:' ← hoy';font-family:var(--d);font-size:.6rem;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--clay);font-weight:700}
 .pace .z-rm{color:var(--z2)}.pace .z-um{color:var(--z3)}
 .pace .fin{font-weight:600}
 
@@ -150,9 +160,7 @@ td .num,td.km,td.wk b{font-family:var(--m);font-variant-numeric:tabular-nums}
 .note{border-left:3px solid var(--accent);padding:2px 0 2px 16px;margin:20px 0;color:var(--soft);font-size:.95rem}
 .note b{color:var(--ink)}
 .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:26px 34px;margin-top:6px}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
-@media (max-width:860px){.grid3{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:520px){.grid3{grid-template-columns:1fr}}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
 .grid3 > div{background:var(--surface);padding:15px 16px}
 .grid3 h4{margin:0 0 .4em;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
 .grid3 p{font-size:.87rem;margin:0;color:var(--soft)}
@@ -174,6 +182,23 @@ ul.clean li::before{content:'';position:absolute;left:6px;top:.62em;width:7px;he
 .dates td:first-child{font-family:var(--m);font-size:.78rem;white-space:nowrap;color:var(--soft);width:1%}
 .dates tr.big td{background:var(--accent-soft)}
 .dates tr.big td:nth-child(2){font-weight:600}
+.gloss{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+@media (max-width:820px){.gloss{grid-template-columns:1fr}}
+.gloss > div{background:var(--surface);padding:16px 18px}
+.gloss dt{font-family:var(--d);font-weight:700;font-size:.94rem;margin-bottom:3px}
+.gloss dt em{font-family:var(--b);font-weight:400;font-style:normal;color:var(--faint);font-size:.82rem}
+.gloss dd{margin:0 0 15px;font-size:.9rem;color:var(--soft);line-height:1.5}
+.gloss dd:last-child{margin-bottom:0}
+.gloss dd b{color:var(--ink)}
+.gloss h4{font-family:var(--d);font-size:.66rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--accent);margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.feel{display:inline-block;font-family:var(--d);font-size:.63rem;font-weight:600;letter-spacing:.05em;
+  border:1px solid var(--line);padding:1px 6px;margin-left:6px;color:var(--faint);vertical-align:1px}
+.decode{background:var(--sunk);border:1px solid var(--line);padding:20px 22px;margin:22px 0}
+.decode .line{font-family:var(--m);font-size:.86rem;font-weight:600;padding-bottom:12px;margin-bottom:14px;
+  border-bottom:1px solid var(--line);color:var(--accent)}
+.decode ul{margin:0;padding-left:1.1em}
+.decode li{margin-bottom:.5em;font-size:.93rem}
 footer{border-top:1px solid var(--line);margin-top:60px;padding-top:22px;color:var(--faint);font-size:.83rem}
 @media (max-width:640px){
   body{padding:0 14px 70px;font-size:16px}
@@ -189,10 +214,10 @@ footer{border-top:1px solid var(--line);margin-top:60px;padding-top:22px;color:v
   <div class="eyebrow">Plan de debut en maratón · 7 sep 2026 → 7 mar 2027</div>
   <h1>26 Semanas<br>a la Maratón</h1>
   <div class="route"><span>ENTRENAS · Rionegro / Guarne · 2.125 m</span><span class="arrow">→</span><span>COMPITES · Medellín · 1.495 m</span><span class="arrow">=</span><span>+3 % ≈ 13 s/km a favor</span></div>
-  <p class="lede">Un plan construido sobre tu situación real: 83 kg, mucha fuerza, 20-30 km por semana, un tibial posterior con antecedentes, y el gimnasio y el jiujitsu intactos.</p>
+  <p class="lede">Un plan construido sobre tu situación real: 27 años, 1,72 m, 83 kg, mucha fuerza, 20-30 km por semana, un 21K de 2:44, un tibial posterior con antecedentes, y el gimnasio y el jiujitsu intactos.</p>
   <dl class="facts">
-    <div><dt>Objetivo</dt><dd>4:30-4:40<small>6:24-6:38 /km · terminar sano</small></dd></div>
-    <div><dt>Ambicioso</dt><dd>4:20<small>6:10 /km si todo sale bien</small></dd></div>
+    <div><dt>Objetivo</dt><dd>4:45-4:55<small>6:45-7:00 /km · terminar sano</small></dd></div>
+    <div><dt>Ambicioso</dt><dd>4:30<small>6:24 /km si todo sale bien</small></dd></div>
     <div><dt>Volumen</dt><dd>1.175 km<small>pico de 64 km en la semana 21</small></dd></div>
     <div><dt>Peso</dt><dd>83 → 77 kg<small>todo antes de la semana 13</small></dd></div>
   </dl>
@@ -201,9 +226,9 @@ footer{border-top:1px solid var(--line);margin-top:60px;padding-top:22px;color:v
 
 <nav><ul>
 <li><a href="#diag">Diagnóstico</a></li><li><a href="#carga">Perfil de carga</a></li><li><a href="#semana">La semana tipo</a></li>
-<li><a href="#plan">Las 26 semanas</a></li><li><a href="#ritmos">Ritmos</a></li><li><a href="#fuerza">Fuerza</a></li>
+<li><a href="#plan">Las 26 semanas</a></li><li><a href="#ritmos">Ritmos</a></li><li><a href="#glosario">Glosario</a></li><li><a href="#fuerza">Fuerza</a></li>
 <li><a href="#nutri">Nutrición</a></li><li><a href="#carrera">En carrera</a></li><li><a href="#otros">Otros factores</a></li>
-<li><a href="#fechas">Fechas clave</a></li>
+<li><a href="#entrenador">Tu entrenador</a></li><li><a href="#fechas">Fechas clave</a></li>
 </ul></nav>
 
 <div class="wrap">
@@ -345,40 +370,40 @@ footer{border-top:1px solid var(--line);margin-top:60px;padding-top:22px;color:v
 
 <section id="plan">
   <div class="shead"><span class="n">04</span><div><h2>Las 26 semanas</h2>
-  <p class="sub">Los rodajes largos van en <b>tiempo, no en distancia</b>. Es deliberado: pasar de 3h15 corriendo tiene un coste de recuperación y un riesgo de lesión que no compensa el beneficio, y a 83 kg eso te aplica el doble. Si vas más lento, corres menos km, y está bien.</p></div></div>
+  <p class="sub">Cada fila te dice <b>exactamente qué corres cada día</b>. Lunes, jueves y domingo son rodajes fáciles: sales, corres esa distancia en zona 2 y ya. El miércoles es la única sesión dura. El viernes no se corre. ¿No conoces un término? Está todo en el <a href="#glosario">glosario</a>.<br><br>Los rodajes largos van en <b>tiempo, no en distancia</b>. Es deliberado: pasar de 3h15 corriendo tiene un coste de recuperación y un riesgo de lesión que no compensa el beneficio, y a 83 kg eso te aplica el doble. Si vas más lento, corres menos km, y está bien.</p></div></div>
   <div class="scroll"><table class="weeks">
-    <thead><tr><th>Semana</th><th style="text-align:right">Vol.</th><th>Rodaje largo</th><th>Calidad · miércoles</th><th>Foco</th></tr></thead>
+    <thead><tr><th>Semana</th><th style="text-align:right">Total</th><th class="dayh">Lun<br>fácil</th><th>Miércoles · sesión de calidad</th><th class="dayh">Jue<br>fácil</th><th>Sábado · rodaje largo</th><th class="dayh">Dom<br>regen.</th></tr></thead>
     <tbody><tr class="phasehead z0"><th colspan="5"><span class="pname">Reconstrucción</span><span class="pdesc">Arreglar el tejido antes de pedirle velocidad. Cero series duras.</span></th></tr>
-<tr class="z0"><td class="wk"><b>1</b><span>7 sep - 13 sep</span></td><td class="km"><b>28</b></td><td class="lng"><b>1h30</b><span>Rodaje continuo suave, sin ritmo objetivo</span></td><td class="qty">TEST: 30 min contrarreloj (define tus zonas)</td><td class="fcs"><span class="pill">Test 30′</span>Calibracion. Cero intensidad fuera del test.</td></tr>
-<tr class="z0"><td class="wk"><b>2</b><span>14 sep - 20 sep</span></td><td class="km"><b>32</b></td><td class="lng"><b>1h45</b><span>Continuo suave</span></td><td class="qty">6x20 s rectas (progresivas) al final de un rodaje</td><td class="fcs">Cadencia: subir 5% respecto a tu media actual.</td></tr>
-<tr class="z0"><td class="wk"><b>3</b><span>21 sep - 27 sep</span></td><td class="km"><b>36</b></td><td class="lng"><b>2h</b><span>Continuo suave</span></td><td class="qty">Fartlek 6x2' comodo-fuerte / 2' suave</td><td class="fcs">Primer estimulo. Nada de series en pista.</td></tr>
-<tr class="z0"><td class="wk"><b>4</b><span>28 sep - 4 oct</span></td><td class="km"><b>27</b></td><td class="lng"><b>1h30</b><span>Continuo suave</span></td><td class="qty">8x20 s rectas</td><td class="fcs">DESCARGA. Reevaluar tibial posterior.</td></tr>
+<tr class="z0"><td class="wk"><b>1</b><span>7 sep - 13 sep</span></td><td class="km"><b>28</b></td><td class="ez">5</td><td class="qty"><span class="pill">Test 30′</span>TEST: 30 min contrarreloj (define tus zonas)<span>~6 km con calentamiento</span></td><td class="ez">6</td><td class="lng"><b>1h30</b><span>~11 km · Rodaje continuo suave, sin ritmo objetivo</span></td><td class="ez"><span class="off">—</span></td></tr>
+<tr class="z0"><td class="wk"><b>2</b><span>14 sep - 20 sep</span></td><td class="km"><b>32</b></td><td class="ez">5.5</td><td class="qty">6x20 s rectas (progresivas) al final de un rodaje<span>~6.5 km con calentamiento</span></td><td class="ez">6.5</td><td class="lng"><b>1h45</b><span>~13 km · Continuo suave</span></td><td class="ez"><span class="off">—</span></td></tr>
+<tr class="z0"><td class="wk"><b>3</b><span>21 sep - 27 sep</span></td><td class="km"><b>36</b></td><td class="ez">6.5</td><td class="qty">Fartlek 6x2' comodo-fuerte / 2' suave<span>~7.5 km con calentamiento</span></td><td class="ez">7.5</td><td class="lng"><b>2h</b><span>~14.5 km · Continuo suave</span></td><td class="ez"><span class="off">—</span></td></tr>
+<tr class="z0"><td class="wk"><b>4</b><span>28 sep - 4 oct</span></td><td class="km"><b>27</b></td><td class="ez">5</td><td class="qty">8x20 s rectas<span>~5.5 km con calentamiento</span></td><td class="ez">5.5</td><td class="lng"><b>1h30</b><span>~11 km · Continuo suave</span></td><td class="ez"><span class="off">—</span></td></tr>
 <tr class="phasehead z1"><th colspan="5"><span class="pname">Base y umbral</span><span class="pdesc">El bloque que más marca te baja. Entra el trabajo de umbral.</span></th></tr>
-<tr class="z1"><td class="wk"><b>5</b><span>5 oct - 11 oct</span></td><td class="km"><b>38</b></td><td class="lng"><b>2h</b><span>Continuo, ultimos 15' un poco mas firmes</span></td><td class="qty">Umbral 3x6' / 2' trote</td><td class="fcs">Empieza practica de nutricion en carrera (30 g/h).</td></tr>
-<tr class="z1"><td class="wk"><b>6</b><span>12 oct - 18 oct</span></td><td class="km"><b>42</b></td><td class="lng"><b>2h15</b><span>Continuo</span></td><td class="qty">Umbral 4x6' / 2' trote</td><td class="fcs">Nutricion 40 g/h. Medir tasa de sudoracion.</td></tr>
-<tr class="z1"><td class="wk"><b>7</b><span>19 oct - 25 oct</span></td><td class="km"><b>46</b></td><td class="lng"><b>2h30</b><span>Continuo</span></td><td class="qty">Cuestas 10x45 s fuerte / bajada trote</td><td class="fcs">Cuestas = fuerza sin impacto. Clave para tu tibial.</td></tr>
-<tr class="z1"><td class="wk"><b>8</b><span>26 oct - 1 nov</span></td><td class="km"><b>35</b></td><td class="lng"><b>1h45</b><span>Continuo</span></td><td class="qty">TEST: 10 km contrarreloj o carrera</td><td class="fcs"><span class="pill">Test 10K</span>DESCARGA + control. Reindexar ritmos.</td></tr>
-<tr class="z1"><td class="wk"><b>9</b><span>2 nov - 8 nov</span></td><td class="km"><b>46</b></td><td class="lng"><b>2h15</b><span>Ultimos 20' progresivos</span></td><td class="qty">Umbral 3x8' / 2' trote</td><td class="fcs">Nutricion 50 g/h.</td></tr>
-<tr class="z1"><td class="wk"><b>10</b><span>9 nov - 15 nov</span></td><td class="km"><b>50</b></td><td class="lng"><b>2h30</b><span>Continuo</span></td><td class="qty">Umbral 2x15' / 3' trote</td><td class="fcs">Primer bloque largo de umbral.</td></tr>
-<tr class="z1"><td class="wk"><b>11</b><span>16 nov - 22 nov</span></td><td class="km"><b>54</b></td><td class="lng"><b>2h45</b><span>Continuo</span></td><td class="qty">Cuestas 12x45 s + 2x10' umbral</td><td class="fcs">Semana mas dura de la Fase 1.</td></tr>
-<tr class="z1"><td class="wk"><b>12</b><span>23 nov - 29 nov</span></td><td class="km"><b>40</b></td><td class="lng"><b>2h</b><span>Continuo</span></td><td class="qty">Umbral 3x6'</td><td class="fcs">DESCARGA. Fin de la fase de perdida de grasa.</td></tr>
+<tr class="z1"><td class="wk"><b>5</b><span>5 oct - 11 oct</span></td><td class="km"><b>38</b></td><td class="ez">6</td><td class="qty">Umbral 3x6' / 2' trote<span>~7 km con calentamiento</span></td><td class="ez">6</td><td class="lng"><b>2h</b><span>~15 km · Continuo, ultimos 15' un poco mas firmes</span></td><td class="ez">4</td></tr>
+<tr class="z1"><td class="wk"><b>6</b><span>12 oct - 18 oct</span></td><td class="km"><b>42</b></td><td class="ez">6.5</td><td class="qty">Umbral 4x6' / 2' trote<span>~7.5 km con calentamiento</span></td><td class="ez">7</td><td class="lng"><b>2h15</b><span>~17 km · Continuo</span></td><td class="ez">4</td></tr>
+<tr class="z1"><td class="wk"><b>7</b><span>19 oct - 25 oct</span></td><td class="km"><b>46</b></td><td class="ez">7</td><td class="qty">Cuestas 10x45 s fuerte / bajada trote<span>~8 km con calentamiento</span></td><td class="ez">7.5</td><td class="lng"><b>2h30</b><span>~18.5 km · Continuo</span></td><td class="ez">4.5</td></tr>
+<tr class="z1"><td class="wk"><b>8</b><span>26 oct - 1 nov</span></td><td class="km"><b>35</b></td><td class="ez">5.5</td><td class="qty"><span class="pill">Test 10K</span>TEST: 10 km contrarreloj o carrera<span>~6.5 km con calentamiento</span></td><td class="ez">6</td><td class="lng"><b>1h45</b><span>~13 km · Continuo</span></td><td class="ez">3.5</td></tr>
+<tr class="z1"><td class="wk"><b>9</b><span>2 nov - 8 nov</span></td><td class="km"><b>46</b></td><td class="ez">7.5</td><td class="qty">Umbral 3x8' / 2' trote<span>~8.5 km con calentamiento</span></td><td class="ez">8</td><td class="lng"><b>2h15</b><span>~17 km · Ultimos 20' progresivos</span></td><td class="ez">5</td></tr>
+<tr class="z1"><td class="wk"><b>10</b><span>9 nov - 15 nov</span></td><td class="km"><b>50</b></td><td class="ez">8</td><td class="qty">Umbral 2x15' / 3' trote<span>~9.5 km con calentamiento</span></td><td class="ez">8.5</td><td class="lng"><b>2h30</b><span>~19 km · Continuo</span></td><td class="ez">5.5</td></tr>
+<tr class="z1"><td class="wk"><b>11</b><span>16 nov - 22 nov</span></td><td class="km"><b>54</b></td><td class="ez">8.5</td><td class="qty">Cuestas 12x45 s + 2x10' umbral<span>~10 km con calentamiento</span></td><td class="ez">9</td><td class="lng"><b>2h45</b><span>~21 km · Continuo</span></td><td class="ez">5.5</td></tr>
+<tr class="z1"><td class="wk"><b>12</b><span>23 nov - 29 nov</span></td><td class="km"><b>40</b></td><td class="ez">6.5</td><td class="qty">Umbral 3x6'<span>~7.5 km con calentamiento</span></td><td class="ez">6.5</td><td class="lng"><b>2h</b><span>~15.5 km · Continuo</span></td><td class="ez">4</td></tr>
 <tr class="phasehead z2"><th colspan="5"><span class="pname">Específico</span><span class="pdesc">Ritmo maratón, nutrición ensayada, calor de Medellín.</span></th></tr>
-<tr class="z2"><td class="wk"><b>13</b><span>30 nov - 6 dec</span></td><td class="km"><b>52</b></td><td class="lng"><b>2h30</b><span>3x10' a ritmo maraton dentro del largo</span></td><td class="qty">Umbral 4x8' / 2' trote</td><td class="fcs">Aparece el ritmo maraton (RM). Nutricion 60 g/h.</td></tr>
-<tr class="z2"><td class="wk"><b>14</b><span>7 dec - 13 dec</span></td><td class="km"><b>60</b></td><td class="lng"><b>2h45</b><span>2x20' a RM (uno a mitad, otro al final)</span></td><td class="qty">VO2 5x3' fuerte / 2' trote</td><td class="fcs">Semana pico del bloque.</td></tr>
-<tr class="z2"><td class="wk"><b>15</b><span>14 dec - 20 dec</span></td><td class="km"><b>45</b></td><td class="lng"><b>2h07</b><span>MEDIA MARATON DE CONTROL (dom 20 dic) a tope</span></td><td class="qty">Solo activacion 3x1' el miercoles</td><td class="fcs"><span class="pill">21K control</span>Este resultado FIJA tu ritmo de maraton real.</td></tr>
-<tr class="z2"><td class="wk"><b>16</b><span>21 dec - 27 dec</span></td><td class="km"><b>42</b></td><td class="lng"><b>2h</b><span>Continuo suave, sin estructura</span></td><td class="qty">Fartlek libre 20' por sensacion</td><td class="fcs">Fiestas. Recuperacion del 21K. Volumen flexible.</td></tr>
-<tr class="z2"><td class="wk"><b>17</b><span>28 dec - 3 jan</span></td><td class="km"><b>52</b></td><td class="lng"><b>2h45</b><span>3x12' a RM</span></td><td class="qty">Umbral 4x8'</td><td class="fcs">Retomar estructura. Nutricion 70 g/h.</td></tr>
-<tr class="z2"><td class="wk"><b>18</b><span>4 jan - 10 jan</span></td><td class="km"><b>58</b></td><td class="lng"><b>3h</b><span>2x25' a RM</span></td><td class="qty">VO2 6x3' / 2' trote</td><td class="fcs">Empieza aclimatacion al calor (correr en Medellin).</td></tr>
-<tr class="z2"><td class="wk"><b>19</b><span>11 jan - 17 jan</span></td><td class="km"><b>62</b></td><td class="lng"><b>3h15</b><span>3x5 km a RM / 1 km trote</span></td><td class="qty">Umbral 2x20' / 3' trote</td><td class="fcs">Sesion mas especifica del plan.</td></tr>
-<tr class="z2"><td class="wk"><b>20</b><span>18 jan - 24 jan</span></td><td class="km"><b>48</b></td><td class="lng"><b>2h</b><span>Continuo</span></td><td class="qty">Umbral 3x6'</td><td class="fcs">DESCARGA antes del pico.</td></tr>
-<tr class="z2"><td class="wk"><b>21</b><span>25 jan - 31 jan</span></td><td class="km"><b>64</b></td><td class="lng"><b>3h15</b><span>PICO: largo con ultimos 8 km a RM</span></td><td class="qty">Umbral 5x6'</td><td class="fcs"><span class="pill">Pico</span>Semana de mayor carga de todo el plan.</td></tr>
-<tr class="z2"><td class="wk"><b>22</b><span>1 feb - 7 feb</span></td><td class="km"><b>56</b></td><td class="lng"><b>2h45</b><span>SIMULACION: 16 km a RM con nutricion completa</span></td><td class="qty">Umbral 3x8'</td><td class="fcs"><span class="pill">Simulación</span>Ensayo general: ropa, zapatillas, geles, desayuno.</td></tr>
+<tr class="z2"><td class="wk"><b>13</b><span>30 nov - 6 dec</span></td><td class="km"><b>52</b></td><td class="ez">8.5</td><td class="qty">Umbral 4x8' / 2' trote<span>~10 km con calentamiento</span></td><td class="ez">9</td><td class="lng"><b>2h30</b><span>~19.5 km · 3x10' a ritmo maraton dentro del largo</span></td><td class="ez">5.5</td></tr>
+<tr class="z2"><td class="wk"><b>14</b><span>7 dec - 13 dec</span></td><td class="km"><b>60</b></td><td class="ez">10</td><td class="qty">VO2max 5x3' fuerte / 2' trote<span>~11.5 km con calentamiento</span></td><td class="ez">10.5</td><td class="lng"><b>2h45</b><span>~21.5 km · 2x20' a RM (uno a mitad, otro al final)</span></td><td class="ez">6.5</td></tr>
+<tr class="z2"><td class="wk"><b>15</b><span>14 dec - 20 dec</span></td><td class="km"><b>45</b></td><td class="ez">6</td><td class="qty"><span class="pill">21K control</span>Solo activacion 3x1' el miercoles<span>~7 km con calentamiento</span></td><td class="ez">6.5</td><td class="lng"><b>2h07</b><span>~21.1 km · MEDIA MARATON DE CONTROL a tope</span></td><td class="ez">4</td></tr>
+<tr class="z2"><td class="wk"><b>16</b><span>21 dec - 27 dec</span></td><td class="km"><b>42</b></td><td class="ez">7</td><td class="qty">Fartlek libre 20' por sensacion<span>~8 km con calentamiento</span></td><td class="ez">7</td><td class="lng"><b>2h</b><span>~15.5 km · Continuo suave, sin estructura</span></td><td class="ez">4.5</td></tr>
+<tr class="z2"><td class="wk"><b>17</b><span>28 dec - 3 jan</span></td><td class="km"><b>52</b></td><td class="ez">8</td><td class="qty">Umbral 4x8'<span>~9 km con calentamiento</span></td><td class="ez">8</td><td class="lng"><b>2h45</b><span>~21.5 km · 3x12' a RM</span></td><td class="ez">5</td></tr>
+<tr class="z2"><td class="wk"><b>18</b><span>4 jan - 10 jan</span></td><td class="km"><b>58</b></td><td class="ez">9</td><td class="qty">VO2max 6x3' / 2' trote<span>~10 km con calentamiento</span></td><td class="ez">9</td><td class="lng"><b>3h</b><span>~24 km · 2x25' a RM</span></td><td class="ez">6</td></tr>
+<tr class="z2"><td class="wk"><b>19</b><span>11 jan - 17 jan</span></td><td class="km"><b>62</b></td><td class="ez">9.5</td><td class="qty">Umbral 2x20' / 3' trote<span>~11 km con calentamiento</span></td><td class="ez">9.5</td><td class="lng"><b>3h15</b><span>~26 km · 3x5 km a RM / 1 km trote</span></td><td class="ez">6</td></tr>
+<tr class="z2"><td class="wk"><b>20</b><span>18 jan - 24 jan</span></td><td class="km"><b>48</b></td><td class="ez">8.5</td><td class="qty">Umbral 3x6'<span>~9.5 km con calentamiento</span></td><td class="ez">8.5</td><td class="lng"><b>2h</b><span>~16 km · Continuo</span></td><td class="ez">5.5</td></tr>
+<tr class="z2"><td class="wk"><b>21</b><span>25 jan - 31 jan</span></td><td class="km"><b>64</b></td><td class="ez">10</td><td class="qty"><span class="pill">Pico</span>Umbral 5x6'<span>~11.5 km con calentamiento</span></td><td class="ez">10.5</td><td class="lng"><b>3h15</b><span>~26 km · PICO: largo con ultimos 8 km a RM</span></td><td class="ez">6.5</td></tr>
+<tr class="z2"><td class="wk"><b>22</b><span>1 feb - 7 feb</span></td><td class="km"><b>56</b></td><td class="ez">8.5</td><td class="qty"><span class="pill">Simulación</span>Umbral 3x8'<span>~10 km con calentamiento</span></td><td class="ez">9</td><td class="lng"><b>2h45</b><span>~22.5 km · SIMULACION: 16 km a RM con nutricion completa</span></td><td class="ez">5.5</td></tr>
 <tr class="phasehead z3"><th colspan="5"><span class="pname">Taper</span><span class="pdesc">Menos volumen, misma intensidad.</span></th></tr>
-<tr class="z3"><td class="wk"><b>23</b><span>8 feb - 14 feb</span></td><td class="km"><b>46</b></td><td class="lng"><b>2h15</b><span>8 km finales a RM</span></td><td class="qty">Umbral 3x6'</td><td class="fcs">TAPER 1: -28% volumen, intensidad intacta.</td></tr>
-<tr class="z3"><td class="wk"><b>24</b><span>15 feb - 21 feb</span></td><td class="km"><b>36</b></td><td class="lng"><b>1h45</b><span>6 km a RM</span></td><td class="qty">4x1000 m a ritmo 10 km</td><td class="fcs">TAPER 2: -44%. Cortar pliometria.</td></tr>
-<tr class="z3"><td class="wk"><b>25</b><span>22 feb - 28 feb</span></td><td class="km"><b>26</b></td><td class="lng"><b>1h15</b><span>4 km a RM</span></td><td class="qty">3x1600 m a RM</td><td class="fcs">TAPER 3: -60%. Empieza carga de carbohidratos jueves.</td></tr>
+<tr class="z3"><td class="wk"><b>23</b><span>8 feb - 14 feb</span></td><td class="km"><b>46</b></td><td class="ez">7</td><td class="qty">Umbral 3x6'<span>~8 km con calentamiento</span></td><td class="ez">7.5</td><td class="lng"><b>2h15</b><span>~18.5 km · 8 km finales a RM</span></td><td class="ez">4.5</td></tr>
+<tr class="z3"><td class="wk"><b>24</b><span>15 feb - 21 feb</span></td><td class="km"><b>36</b></td><td class="ez">5.5</td><td class="qty">VO2max 4x1000 m a ritmo 10 km<span>~6.5 km con calentamiento</span></td><td class="ez">6</td><td class="lng"><b>1h45</b><span>~14.5 km · 6 km a RM</span></td><td class="ez">3.5</td></tr>
+<tr class="z3"><td class="wk"><b>25</b><span>22 feb - 28 feb</span></td><td class="km"><b>26</b></td><td class="ez">4</td><td class="qty">3x1600 m a RM<span>~4.5 km con calentamiento</span></td><td class="ez">4</td><td class="lng"><b>1h15</b><span>~10.5 km · 4 km a RM</span></td><td class="ez">2.5</td></tr>
 <tr class="phasehead z4"><th colspan="5"><span class="pname">Carrera</span><span class="pdesc">Carga de carbohidratos y correr.</span></th></tr>
-<tr class="z4"><td class="wk"><b>26</b><span>1 mar - 7 mar</span></td><td class="km"><b>54</b></td><td class="lng"><b>42,195 km</b><span>MARATON 42.195 km - domingo 7 de marzo</span></td><td class="qty">2x2 km a RM el martes</td><td class="fcs"><span class="pill">MARATÓN</span>Semana de carrera. 12 km faciles + la maraton.</td></tr></tbody>
+<tr class="z4"><td class="wk"><b>26</b><span>1 mar - 7 mar</span></td><td class="km"><b>54</b></td><td class="ez">4.5</td><td class="qty"><span class="pill">MARATÓN</span>2x2 km a RM el martes<span>~4 km con calentamiento</span></td><td class="ez">3</td><td class="lng"><b>42,195</b><span>km · MARATON 42,195 km - domingo</span></td><td class="ez"><span class="off">—</span></td></tr></tbody>
   </table></div>
   <h3>Las reglas de progresión</h3>
   <p class="read" style="color:var(--soft);font-size:.95rem">Estas cinco son las que evitan que repitas lo del 30K.</p>
@@ -396,17 +421,21 @@ footer{border-top:1px solid var(--line);margin-top:60px;padding-top:22px;color:v
   <div class="scroll"><table class="pace">
     <thead><tr><th>Test 5 km</th><th>Regener.</th><th>Fácil</th><th class="z-rm">R. maratón</th><th class="z-um">Umbral</th><th>Interv.</th><th>Pred. 10K</th><th>Pred. 21K</th><th>Maratón en Medellín</th></tr></thead>
     <tbody>
-      <tr><td>32:00</td><td>8:53</td><td>8:18</td><td class="z-rm">7:03</td><td class="z-um">6:41</td><td>6:18</td><td>1:06:43</td><td>2:27:12</td><td class="fin">4:57:42 · 7:03/km</td></tr>
+      <tr class="now"><td>36:00</td><td>9:41</td><td>9:06</td><td class="z-rm">7:51</td><td class="z-um">7:29</td><td>7:06</td><td>1:15:03</td><td>2:45:36</td><td class="fin">5:34:55 · 7:56/km</td></tr>
+      <tr><td>34:00</td><td>9:17</td><td>8:42</td><td class="z-rm">7:27</td><td class="z-um">7:05</td><td>6:42</td><td>1:10:53</td><td>2:36:24</td><td class="fin">5:16:19 · 7:30/km</td></tr>
+      <tr class="hi"><td>32:00</td><td>8:53</td><td>8:18</td><td class="z-rm">7:03</td><td class="z-um">6:41</td><td>6:18</td><td>1:06:43</td><td>2:27:12</td><td class="fin">4:57:42 · 7:03/km</td></tr>
       <tr><td>30:00</td><td>8:29</td><td>7:54</td><td class="z-rm">6:39</td><td class="z-um">6:17</td><td>5:54</td><td>1:02:32</td><td>2:18:00</td><td class="fin">4:39:06 · 6:37/km</td></tr>
-      <tr class="hi"><td>28:00</td><td>8:05</td><td>7:30</td><td class="z-rm">6:15</td><td class="z-um">5:53</td><td>5:30</td><td>58:22</td><td>2:08:48</td><td class="fin">4:20:29 · 6:10/km</td></tr>
+      <tr><td>28:00</td><td>8:05</td><td>7:30</td><td class="z-rm">6:15</td><td class="z-um">5:53</td><td>5:30</td><td>58:22</td><td>2:08:48</td><td class="fin">4:20:29 · 6:10/km</td></tr>
       <tr><td>26:00</td><td>7:41</td><td>7:06</td><td class="z-rm">5:51</td><td class="z-um">5:29</td><td>5:06</td><td>54:12</td><td>1:59:36</td><td class="fin">4:01:53 · 5:44/km</td></tr>
-      <tr><td>24:00</td><td>7:17</td><td>6:42</td><td class="z-rm">5:27</td><td class="z-um">5:05</td><td>4:42</td><td>50:02</td><td>1:50:24</td><td class="fin">3:43:16 · 5:17/km</td></tr>
+      
     </tbody>
   </table></div>
   <div class="grid2" style="margin-top:24px">
     <div class="read">
-      <h3 style="margin-top:0">Traducción directa de tu objetivo</h3>
-      <p>Para correr a ~6:15/km en Medellín necesitas llegar a hacer <b>5 km en 28 minutos en Rionegro</b>. Ese es el número que persigues. Hoy probablemente estás entre 32 y 34. Son 4-6 minutos en 6 meses: exigente, pero absolutamente hacible partiendo desde cero estructura.</p>
+      <h3 style="margin-top:0">Dónde estás y dónde tienes que llegar</h3>
+      <p>Tu 21K de <b>2:44</b> equivale hoy a un <b>5 km de ~35:40</b> — la fila marcada como «hoy». Para correr a ~7:00/km en Medellín (objetivo 4:50) necesitas llegar a <b>5 km en 32 minutos en Rionegro</b>: la fila marcada como objetivo.</p>
+      <p><b>Son unos 3 minutos y medio en 5 km, en 6 meses.</b> Es exigente pero muy alcanzable partiendo, como tú, de cero estructura: la mayor parte de esa mejora no viene de correr más, viene de correr con la distribución correcta y de bajar 6 kg.</p>
+      <div class="note" style="margin-bottom:14px"><b>Ojo con ese 2:44:</b> tú mismo dices que todas tus medias fueron a ritmo lento. Eso significa que casi con seguridad es un rodaje cómodo, no una carrera a tope, y la tabla lo subestima. <b>El test de la semana 1 te va a decir la verdad</b>, y probablemente sea mejor de lo que este número sugiere.</div>
       <h3>El test que calibra todo · semana 1, miércoles</h3>
       <p>Tu Samsung mide bien la frecuencia cardíaca pero el GPS falla, así que el plan no depende de él: <b>Strava en el celular para el ritmo, el reloj solo para el pulso</b>.</p>
       <ul class="tight">
@@ -417,15 +446,16 @@ footer{border-top:1px solid var(--line);margin-top:60px;padding-top:22px;color:v
       </ul>
     </div>
     <div class="read">
-      <h3 style="margin-top:0">Zonas de frecuencia cardíaca</h3>
+      <h3 style="margin-top:0">Tus zonas de frecuencia cardíaca</h3>
+      <p style="font-size:.93rem;color:var(--soft)">Con 27 años y 52 ppm en reposo: FC máxima estimada <b>189 ppm</b>, frecuencia cardíaca de reserva <b>137</b> (método Karvonen). <b>Úsalas desde la semana 1</b>; el test de 30 minutos las sustituye por zonas medidas en ti.</p>
       <div class="scroll"><table style="min-width:0">
-        <thead><tr><th>Zona</th><th>% FCU</th><th>Cómo se siente</th></tr></thead>
+        <thead><tr><th>Zona</th><th>Pulsaciones</th><th>% FCU</th><th>Cómo se siente</th></tr></thead>
         <tbody>
-          <tr><td>Z1 · Regenerativo</td><td class="num">&lt; 81 %</td><td>Puedes cantar</td></tr>
-          <tr><td>Z2 · Fácil</td><td class="num">81-89 %</td><td>Frases completas sin ahogarte</td></tr>
-          <tr><td>Z3 · Ritmo maratón</td><td class="num">90-93 %</td><td>Frases cortas, controlado</td></tr>
-          <tr><td>Z4 · Umbral</td><td class="num">94-99 %</td><td>Palabras sueltas. «Cómodamente duro»</td></tr>
-          <tr><td>Z5 · Intervalos</td><td class="num">≥ 100 %</td><td>No hablas</td></tr>
+          <tr><td>Z1 · Regenerativo</td><td class="num"><b>120-134</b></td><td class="num">&lt; 81 %</td><td>Puedes cantar</td></tr>
+          <tr class="key"><td>Z2 · Fácil</td><td class="num"><b>134-148</b></td><td class="num">81-89 %</td><td>Frases completas sin ahogarte</td></tr>
+          <tr><td>Z3 · Ritmo maratón</td><td class="num"><b>148-162</b></td><td class="num">90-93 %</td><td>Frases cortas, controlado</td></tr>
+          <tr><td>Z4 · Umbral</td><td class="num"><b>162-175</b></td><td class="num">94-99 %</td><td>Palabras sueltas. «Cómodamente duro»</td></tr>
+          <tr><td>Z5 · VO2max</td><td class="num"><b>175-189</b></td><td class="num">≥ 100 %</td><td>No hablas</td></tr>
         </tbody>
       </table></div>
       <div class="note"><b>Nunca entrenes a los ritmos de Medellín estando en Rionegro.</b> Es la trampa clásica del corredor de altura: persigues un número que tu cuerpo no puede sostener a 2.100 m, conviertes cada rodaje fácil en una sesión de umbral, y te estancas. Entrena por sensación y pulso; compite con el crono.</div>
@@ -444,8 +474,117 @@ footer{border-top:1px solid var(--line);margin-top:60px;padding-top:22px;color:v
   </div>
 </section>
 
+<section id="glosario">
+  <div class="shead"><span class="n">06</span><div><h2>Glosario</h2>
+  <p class="sub">Qué significa cada término del plan, asumiendo que es la primera vez que lo ves.</p></div></div>
+
+  <div class="decode">
+    <div class="line">Semana 19 · 62 km · Sáb: 3h15 (3×5 km a RM / 1 km trote) · Mié: Umbral 2×20′ / 3′ trote</div>
+    <ul>
+      <li>Esa semana corres <b>62 km en total</b>, repartidos en 5 salidas.</li>
+      <li><b>Sábado:</b> sales <b>3 horas y 15 minutos</b>. Dentro de ese rodaje haces <b>tres bloques de 5 km a tu ritmo de maratón</b>, con <b>1 km de trote suave</b> entre cada bloque. El resto del tiempo, ritmo fácil.</li>
+      <li><b>Miércoles:</b> calientas 15 min, haces <b>dos bloques de 20 minutos a ritmo de umbral</b> con <b>3 minutos de trote suave</b> entre ellos, y enfrías 10 min.</li>
+      <li><b>Lunes y jueves:</b> corres fácil las distancias de esas columnas. <b>Domingo:</b> trote regenerativo corto. <b>Viernes:</b> no corres.</li>
+    </ul>
+  </div>
+
+  <h3>Los tipos de sesión</h3>
+  <p class="read" style="color:var(--soft);font-size:.95rem">Esto es lo que aparece en la tabla de las 26 semanas.</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Término</th><th>Qué es exactamente</th><th>Cómo se siente</th><th>Para qué sirve</th></tr></thead>
+    <tbody>
+      <tr><td><b>Rodaje</b></td><td>Sinónimo de «salir a correr» de forma continua. También «rodar».</td><td>—</td><td>—</td></tr>
+      <tr><td><b>Carrera fácil</b><br><span style="color:var(--faint);font-size:.78rem">rodaje fácil, Z2</span></td><td>Correr suave y continuo, 35-50 min. <b>Es el 75-80 % de todo lo que corres.</b></td><td>Puedes decir una frase de 10 palabras sin partirla para respirar</td><td>Construye la base aeróbica: más capilares, más mitocondrias, más capacidad de quemar grasa. <b>Es la sesión que más te va a cambiar y la que ahora haces demasiado rápido.</b></td></tr>
+      <tr><td><b>Regenerativo</b><br><span style="color:var(--faint);font-size:.78rem">trote de recuperación</span></td><td>Trote muy corto y muy lento, 30-40 min. Más lento de lo que crees que es lento.</td><td>Podrías cantar</td><td>Mueve sangre a los músculos para acelerar la recuperación <b>sin añadir carga</b>. No entrena nada. Es lo primero que se elimina si estás cansado.</td></tr>
+      <tr><td><b>Rodaje largo</b><br><span style="color:var(--faint);font-size:.78rem">long run</span></td><td>La sesión más larga de la semana, el fin de semana. Aquí va <b>medida en tiempo, no en km</b>.</td><td>Fácil al principio; los últimos 30 min cuestan</td><td>El pilar del plan. Enseña al cuerpo a usar grasa como combustible, endurece tendones y huesos, y entrena la cabeza para el aburrimiento del km 30.</td></tr>
+      <tr><td><b>Sesión de calidad</b></td><td>El nombre genérico de <b>la sesión dura de la semana</b>, la del miércoles. Puede ser umbral, cuestas, VO2max o un test — la tabla dice cuál toca.</td><td>Duro</td><td>Es la única sesión donde corres rápido a propósito.</td></tr>
+      <tr><td><b>Umbral</b><br><span style="color:var(--faint);font-size:.78rem">tempo, threshold</span></td><td>Bloques de 6 a 20 min a ritmo «cómodamente duro», con trote suave entre ellos. <b>3×8′ / 2′ trote</b> = tres bloques de 8 min duros, con 2 min de trote entre cada uno.</td><td>Palabras sueltas, no frases. Podrías sostenerlo ~1 hora si te obligaran</td><td><b>La sesión que más te va a bajar la marca.</b> Sube tu umbral de lactato, que es el techo de tu ritmo sostenible. Es exactamente lo que nunca has entrenado.</td></tr>
+      <tr><td><b>VO2max</b><br><span style="color:var(--faint);font-size:.78rem">series, intervalos</span></td><td>Repeticiones cortas y muy fuertes: <b>5×3′ / 2′ trote</b>, o <b>4×1000 m</b>.</td><td>No puedes hablar. Duro de verdad</td><td>Sube tu techo de consumo de oxígeno. <b>Solo aparece 3 veces en todo el plan</b> (semanas 14, 18 y 24), a propósito: aporta poco a la maratón y concentra casi todo el riesgo de lesión. Los tuyos ya te costaron un tibial posterior.</td></tr>
+      <tr><td><b>Cuestas</b></td><td>10-12 repeticiones de 45 s subiendo fuerte, <b>bajando trotando muy suave</b>.</td><td>Duro en la subida, descanso en la bajada</td><td>Fuerza de piernas <b>con impacto bajo</b>: tensión muscular alta sin el golpe de la pista. Para ti es oro. <b>La bajada es donde te lesionas, no la subida.</b></td></tr>
+      <tr><td><b>Fartlek</b></td><td>Sueco: «juego de velocidad». Cambios de ritmo dentro de un rodaje, sin cronómetro estricto. <b>6×2′ cómodo-fuerte / 2′ suave.</b></td><td>Variable, por sensación</td><td>Versión suave y desestructurada de los intervalos. Introduce intensidad sin el estrés de una sesión formal.</td></tr>
+      <tr><td><b>Rectas</b><br><span style="color:var(--faint);font-size:.78rem">progresivos, strides</span></td><td>6-8 aceleraciones de 20 s al final de un rodaje fácil, <b>relajadas</b>, caminando entre cada una hasta recuperarte del todo. No es un sprint.</td><td>Rápido pero cómodo, sin tensión</td><td>Mantienen la mecánica de zancada rápida sin coste de fatiga. Cuestan casi nada y valen mucho.</td></tr>
+      <tr><td><b>Test / contrarreloj</b></td><td>Correr una distancia o un tiempo a tope para medir dónde estás. Semanas 1, 8 y 15.</td><td>Máximo esfuerzo sostenible</td><td>Es lo que calibra el plan. Sin test, los ritmos son adivinanza.</td></tr>
+      <tr><td><b>Simulación</b></td><td>Ensayo general (semana 22): 16 km a ritmo de maratón con la ropa, las zapatillas, el desayuno y los geles exactos del día de la carrera.</td><td>Como la carrera, pero corto</td><td>Si algo va a fallar, que falle aquí y no en el km 30.</td></tr>
+      <tr><td><b>Activación</b></td><td>Estímulos muy cortos (3×1′) unos días antes de una carrera.</td><td>Breve y ágil</td><td>«Despierta» las piernas sin cansarlas. Evita llegar plano tras días fáciles.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>El resto de los términos</h3>
+  <div class="gloss">
+    <div>
+      <h4>Ritmos e intensidad</h4>
+      <dl>
+        <dt>Pace / ritmo</dt><dd>Minutos que tardas en un kilómetro. <b>7:49/km</b> = siete minutos y cuarenta y nueve segundos por km. Ojo: <b>más bajo = más rápido</b>.</dd>
+        <dt>RM · ritmo maratón</dt><dd>El ritmo al que planeas correr la maratón. Sale de tu tabla de ritmos. «3×10′ a RM» = tres bloques de 10 minutos a ese ritmo exacto.</dd>
+        <dt>Zonas Z1-Z5</dt><dd>Cinco niveles de intensidad definidos por pulsaciones. Z1 regenerativo, Z2 fácil, Z3 ritmo maratón, Z4 umbral, Z5 VO2max.</dd>
+        <dt>FCU · FC de umbral <em>(LTHR)</em></dt><dd>Tu pulso en el umbral de lactato. <b>Es el número que sale del test de 30 minutos</b>, y es más fiable que cualquier fórmula por edad porque se mide en ti.</dd>
+        <dt>FC de reserva</dt><dd>FC máxima − FC en reposo. La tuya: 189 − 52 = <b>137</b>. Se usa para calcular zonas con el método Karvonen.</dd>
+        <dt>RPE · esfuerzo percibido</dt><dd>Del 1 al 10, cuánto te costó una sesión. Suena poco científico y es de los mejores indicadores que existen. Si un rodaje que fue un 4 hoy es un 7 <b>al mismo ritmo</b>, estás acumulando fatiga.</dd>
+        <dt>Test de habla</dt><dd>Si hablas en frases completas vas fácil; palabras sueltas, umbral; no hablas, VO2max.</dd>
+        <dt>Fórmula de Riegel</dt><dd>La ecuación que predice tu tiempo en una distancia a partir de otra. De ahí salen las columnas «Pred. 10K / 21K».</dd>
+      </dl>
+    </div>
+    <div>
+      <h4>Fisiología</h4>
+      <dl>
+        <dt>Umbral de lactato</dt><dd>El esfuerzo por encima del cual produces lactato más rápido de lo que lo reciclas, y lo acumulas hasta tener que frenar. <b>Cuanto más alto lo tengas, más rápido corres de forma sostenida.</b> Es la variable que más importa en maratón.</dd>
+        <dt>VO2max</dt><dd>El máximo oxígeno que tu cuerpo puede usar por minuto: tu «cilindraje». Importa, pero para maratón menos que el umbral y la economía.</dd>
+        <dt>Economía de carrera</dt><dd>Cuánto oxígeno gastas para mantener un ritmo. Dos corredores con el mismo VO2max van a ritmos distintos si uno es más eficiente. Se mejora con fuerza pesada, pliometría, cuestas y cadencia.</dd>
+        <dt>Base aeróbica</dt><dd>Capilares, mitocondrias, volumen sanguíneo, resistencia de tendones. Se construye con <b>muchos kilómetros fáciles durante años</b>, no con semanas duras.</dd>
+        <dt>Polarización 80/20</dt><dd>~80 % del volumen verdaderamente fácil, ~20 % verdaderamente duro, casi nada en el medio. <b>Tu problema actual es que corres el 100 % en el medio</b>, que es donde menos se adapta el cuerpo.</dd>
+        <dt>Glucógeno</dt><dd>Cómo almacenas carbohidratos en músculo e hígado. Tienes ~500 g (≈2.000 kcal) y una maratón cuesta 2.800-3.200. De ahí todo el asunto de la carga.</dd>
+        <dt>El muro</dt><dd>El km 30-32, cuando se acaba el glucógeno y el cuerpo tira solo de grasa, que produce energía mucho más lento. <b>Se evita comiendo durante la carrera y saliendo despacio, no aguantando.</b></dd>
+      </dl>
+    </div>
+    <div>
+      <h4>Nutrición</h4>
+      <dl>
+        <dt>g/kg</dt><dd>Gramos por kilo de peso corporal. <b>2 g/kg de proteína</b> a 83 kg = 166 g al día. Escala con el tamaño de la persona.</dd>
+        <dt>Periodizar carbohidratos</dt><dd>Muchos los días duros, menos los fáciles. Permite estar en déficit sin sabotear las sesiones que importan.</dd>
+        <dt>Carga de carbohidratos</dt><dd>Comer 8-10 g/kg en las 36-48 h previas para llenar el glucógeno al máximo.</dd>
+        <dt>Depleción / vaciado</dt><dd>«Vaciar» el glucógeno antes de cargar. <b>Protocolo de los años 60, ya no se recomienda</b>: un solo día de carga alta satura igual, sin el bajón. Es lo que tiene el plan de tu amigo.</dd>
+        <dt>Bajo residuo</dt><dd>Poca fibra las últimas 24-36 h, para reducir la masa intestinal y el riesgo gástrico. Es la parte que <b>sí</b> es correcta del plan de tu amigo.</dd>
+        <dt>Entrenar el intestino <em>(gut training)</em></dt><dd>Practicar comer y beber corriendo, subiendo la cantidad poco a poco. El intestino se adapta de verdad. <b>Sin esto, 90 g/h te dan diarrea en el km 25.</b></dd>
+        <dt>Glucosa : fructosa</dt><dd>Usan transportadores intestinales distintos, así que mezclados absorbes <b>más del doble</b>. Por eso los geles buenos dicen «2:1» en la etiqueta.</dd>
+        <dt>Tasa de sudoración</dt><dd>Mililitros de sudor por hora. Se mide pesándote antes y después de correr una hora. Determina cuánto beber.</dd>
+      </dl>
+    </div>
+    <div>
+      <h4>Gimnasio y prevención</h4>
+      <dl>
+        <dt>4×6-8</dt><dd>Cuatro series de entre 6 y 8 repeticiones. <b>3×12/lado</b> = tres series de 12 por cada pierna.</dd>
+        <dt>RIR · repeticiones en reserva</dt><dd>Cuántas más podrías haber hecho al terminar la serie. «RIR 2-3» = paras con 2 o 3 en el tanque. <b>En este plan nunca llegas al fallo.</b></dd>
+        <dt>Tempo 3-3</dt><dd>Tres segundos subiendo el peso y tres bajándolo. Ese ritmo lento es lo que adapta el <b>tendón</b>, no solo el músculo.</dd>
+        <dt>Isométrico</dt><dd>Contraer sin que la articulación se mueva: aguantar una posición. Los isométricos de sóleo <b>alivian el dolor de tendón además de cargarlo</b>.</dd>
+        <dt>Excéntrico</dt><dd>La fase en que el músculo se alarga bajo carga (bajar el peso, el nordic curl). Donde más se adapta el tendón.</dd>
+        <dt>Pliometría</dt><dd>Saltos. Mejora la rigidez del tendón y la economía de carrera. Se corta en las últimas semanas por el impacto.</dd>
+        <dt>Sóleo</dt><dd>El músculo profundo de la pantorrilla, bajo el gemelo. Se aísla con la elevación de talón <b>sentado</b>. <b>Soporta 6-8 veces tu peso en cada apoyo</b> — a 83 kg, más de 500 kg por zancada.</dd>
+        <dt>Tibial posterior</dt><dd>Va por dentro de la tibia y sostiene el arco del pie. <b>Es el que se te inflamó.</b> Duele en la cara interna de la tibia o detrás del hueso interno del tobillo.</dd>
+        <dt>Cadencia</dt><dd>Pasos por minuto. Subirla un 5-8 % reduce de forma medible la fuerza de impacto. Tu corrección técnica más rentable.</dd>
+        <dt>Fractura por estrés</dt><dd>Microfisura ósea por carga repetida. Duele en <b>un punto que puedes señalar con un dedo</b>, al saltar sobre una pierna, y <b>en reposo o de noche</b>. Bandera roja absoluta.</dd>
+      </dl>
+    </div>
+    <div>
+      <h4>Estructura del plan</h4>
+      <dl>
+        <dt>Volumen</dt><dd>Los kilómetros totales de la semana. La métrica principal de carga.</dd>
+        <dt>Semana de descarga</dt><dd>Bajas el volumen 25-30 % a propósito. <b>Es donde ocurre la adaptación</b>: entrenar crea el estímulo, descansar crea la mejora. Semanas 4, 8, 12, 16 y 20.</dd>
+        <dt>Taper / afinamiento</dt><dd>Las últimas 3 semanas. Bajas el volumen 30-60 % pero <b>mantienes la intensidad</b>. El error clásico es dejar de correr rápido y llegar plano.</dd>
+        <dt>Progresión del 10 %</dt><dd>No subas el volumen semanal más de un 10 %. Subir más rápido es la causa más común de lesión por sobrecarga.</dd>
+        <dt>Reindexar</dt><dd>Volver a la tabla de ritmos después de un test y usar la fila nueva. Tus ritmos cambian conforme mejoras; el plan no.</dd>
+      </dl>
+      <h4 style="margin-top:22px">El día de la carrera</h4>
+      <dl>
+        <dt>Negative split</dt><dd>Correr la segunda mitad más rápido que la primera. <b>Es la estrategia correcta y la que casi nadie ejecuta</b>, porque en el km 5 vas fresco y el ritmo objetivo se siente absurdamente fácil.</dd>
+        <dt>Liebre / pacer</dt><dd>Un corredor de la organización que lleva un globo con un tiempo y corre a ese ritmo exacto. <b>Para un debut valen oro</b>: te quitan la decisión de ritmo.</dd>
+        <dt>Avituallamiento</dt><dd>Los puestos de agua y bebida del recorrido, normalmente cada 5 km.</dd>
+        <dt>Tiempo neto / chip</dt><dd>Desde que <b>tú</b> cruzas la salida, no desde el disparo. Es el que cuenta para ti.</dd>
+      </dl>
+    </div>
+  </div>
+</section>
 <section id="fuerza">
-  <div class="shead"><span class="n">06</span><div><h2>Fuerza, tendón y jiujitsu</h2>
+  <div class="shead"><span class="n">07</span><div><h2>Fuerza, tendón y jiujitsu</h2>
   <p class="sub">Tus 4 años de gimnasio son una ventaja competitiva. Lo que cambia no es <i>si</i> entrenas fuerza, sino <i>cómo</i>: de hipertrofia a fuerza y potencia. Misma frecuencia, mucho menos coste de recuperación, más beneficio para correr.</p></div></div>
   <div class="note"><b>El eslabón débil eres tú y es el sóleo.</b> Soporta entre 6 y 8 veces tu peso corporal en cada apoyo al correr — a 83 kg son más de 500 kg por zancada, unas 160 veces por minuto. Es el músculo más cargado al correr y el que casi nadie entrena. El tibial posterior trabaja a su lado sosteniendo el arco. Lo entrenaste de golpe tras mucho tiempo, y al día siguiente le metiste intervalos.</div>
   <div class="scroll"><table>
@@ -496,8 +635,70 @@ footer{border-top:1px solid var(--line);margin-top:60px;padding-top:22px;color:v
   </table></div>
   <div class="note"><b>Bandera roja absoluta:</b> dolor óseo, puntual, que puedes señalar con un dedo, que duele al saltar sobre una pierna y que duele <b>en reposo o de noche</b>. Puede ser una fractura por estrés. Se para y se consulta médico. Correr sobre una fractura por estrés no retrasa el proyecto: lo termina.</div>
 </section>
+<section id="entrenador">
+  <div class="shead"><span class="n">08</span><div><h2>Qué decirle a tu entrenador</h2>
+  <p class="sub">Tu rutina actual —día 1 pecho y espalda, día 2 pierna completa, día 3 brazo— <b>encaja con el plan sin rehacerla</b>. Solo hay que reordenar los días y añadir tres ejercicios.</p></div></div>
+
+  <div class="decode">
+    <div class="line">Mensaje para copiar y pegar</div>
+    <p>Hola. Voy a empezar un plan de 26 semanas para correr mi primera maratón (7 de marzo de 2027). Quiero <b>mantener los 3 días de gimnasio contigo</b>, pero necesito coordinar la rutina con el entrenamiento de carrera para no acumular fatiga en los días equivocados ni repetir la lesión de tibial posterior que tuve. Estos son los ajustes:</p>
+    <p><b>1. Orden de los días</b> (lo más importante):</p>
+    <ul>
+      <li><b>Lunes: PIERNA COMPLETA.</b> Corro suave esa misma tarde, y así el día duro de piernas queda lo más lejos posible de mi rodaje largo del sábado.</li>
+      <li><b>Miércoles: PECHO Y ESPALDA.</b> Esa tarde tengo mi sesión de carrera fuerte, y el torso no interfiere.</li>
+      <li><b>Viernes: BRAZO</b> (bíceps, tríceps, hombro). Ese día no corro, y los brazos no afectan el rodaje largo del sábado.</li>
+      <li><b>Nunca pierna el jueves o el viernes.</b> Necesito llegar con las piernas frescas al sábado.</li>
+    </ul>
+    <p><b>2. Tres ejercicios nuevos, en el día de pierna, todas las semanas</b> (prevención, no negociables):</p>
+    <ul>
+      <li><b>Elevación de talón SENTADO con peso — 4×12, tempo lento: 3 s subiendo, 3 s bajando.</b> Rodilla flexionada, para que trabaje el sóleo. El más importante de los tres.</li>
+      <li><b>Elevación de talón de pie a una pierna — 3×12 por lado</b>, control total.</li>
+      <li><b>Tibial anterior — 3×15-20.</b></li>
+    </ul>
+    <p><b>3. Cambio de enfoque por bloques:</b></p>
+    <ul>
+      <li><b>Semanas 1-12:</b> como venimos, hipertrofia, series de 6-12.</li>
+      <li><b>Semanas 13-22:</b> cambiar a <b>fuerza y potencia</b>: series de 4-6 con más carga y menos volumen, más algo de pliometría ligera (salto al cajón 4×4). Menos series, más peso. Mejora la economía de carrera y cuesta mucha menos recuperación.</li>
+      <li><b>Semanas 23-26:</b> mantenimiento. Cargas moderadas, volumen bajo, <b>cortar toda la pliometría desde la semana 24</b>.</li>
+    </ul>
+    <p><b>4. Dos reglas generales:</b></p>
+    <ul>
+      <li><b>Nunca al fallo.</b> Dejar 2-3 repeticiones en reserva siempre.</li>
+      <li><b>Nada de ejercicios nuevos de pantorrilla o tibial introducidos de golpe.</b> La vez que me lesioné fue exactamente eso: metí trabajo de pantorrillas y tibiales tras mucho tiempo sin hacerlo, y al día siguiente hice series. Si añadimos algo nuevo ahí, que sea con carga baja y subiendo durante 2-3 semanas.</li>
+    </ul>
+    <p><b>5. Los sábados</b> hago por mi cuenta 25 min de tendón y core después del rodaje largo. Si prefieres programarlo tú, mejor.</p>
+    <p>Te aviso en las semanas 4, 8, 12, 16 y 20, que son semanas de descarga en carrera — si podemos bajar también el volumen del gimnasio esas semanas, mejor.</p>
+  </div>
+
+  <h3>Por qué cada cosa, por si te pregunta</h3>
+  <div class="scroll"><table>
+    <thead><tr><th>Ajuste</th><th>Razón</th></tr></thead>
+    <tbody>
+      <tr><td><b>Pierna el lunes</b></td><td>Deja 5 días hasta el rodaje largo del sábado. Con pierna el jueves o el viernes, el largo se corre con las piernas ya cargadas, que es donde aparecen las lesiones por fatiga.</td></tr>
+      <tr><td><b>Pecho/espalda el miércoles</b></td><td>Es el día de la sesión de carrera dura. El torso no compite por la recuperación de las piernas, así que se apila el estrés en el mismo día y quedan libres los días fáciles.</td></tr>
+      <tr><td><b>Brazo el viernes</b></td><td>Cero impacto sobre el rodaje largo del sábado. Aprovecha el único día que no corres.</td></tr>
+      <tr><td><b>Talón sentado, tempo 3-3</b></td><td>Con la rodilla flexionada se aísla el sóleo, que soporta 6-8 veces el peso corporal en cada apoyo. Trabaja junto al tibial posterior, que es el que se te inflamó. Y el movimiento lento con carga alta es el protocolo con mejor evidencia para adaptar <b>tendón</b>, no solo músculo.</td></tr>
+      <tr><td><b>De hipertrofia a fuerza en la semana 13</b></td><td>Las series de 4-6 con carga alta dan el beneficio de economía de carrera con mucho menos daño muscular que las de 8-12 cerca del fallo — justo lo que necesitas cuando el volumen de carrera esté en el pico.</td></tr>
+      <tr><td><b>Cortar pliometría en la semana 24</b></td><td>Impacto alto a dos semanas de la carrera: todo el riesgo, ningún beneficio que llegue a tiempo.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Cómo queda la semana completa</h3>
+  <div class="scroll"><table class="tt">
+    <thead><tr><th>Día</th><th>6:00 AM · gimnasio</th><th>Mediodía o noche · carrera</th></tr></thead>
+    <tbody>
+      <tr class="key"><td>Lunes</td><td><b>Pierna completa</b> + los 3 ejercicios de tobillo</td><td>Carrera fácil</td></tr>
+      <tr><td>Martes</td><td>—</td><td>Jiujitsu</td></tr>
+      <tr class="key"><td>Miércoles</td><td><b>Pecho y espalda</b></td><td><b>Sesión de calidad</b></td></tr>
+      <tr><td>Jueves</td><td>—</td><td>Carrera fácil + cadencia</td></tr>
+      <tr><td>Viernes</td><td><b>Brazo</b> (bíceps, tríceps, hombro)</td><td><b>No se corre</b></td></tr>
+      <tr class="key"><td>Sábado</td><td>—</td><td><b>Rodaje largo</b> + 25 min de tendón y core después</td></tr>
+      <tr class="rest"><td>Domingo</td><td>—</td><td>Regenerativo corto o descanso</td></tr>
+    </tbody>
+  </table></div>
+</section>
 <section id="nutri">
-  <div class="shead"><span class="n">07</span><div><h2>Nutrición</h2>
+  <div class="shead"><span class="n">09</span><div><h2>Nutrición</h2>
   <p class="sub">Tu pregunta era si esto va todo el tiempo o solo cerca de la carrera. Va <b>todo el tiempo</b>, haciendo un trabajo distinto en cada fase.</p></div></div>
   <div class="read"><p>Casi todo el mundo entiende esto al revés: se obsesionan con la semana de la carrera e improvisan los cinco meses anteriores. Es al contrario. La nutrición de la semana de carrera vale unos pocos minutos; la de los cinco meses previos decide si llegas a la línea de salida.</p></div>
   <div class="scroll"><table>
@@ -580,7 +781,7 @@ footer{border-top:1px solid var(--line);margin-top:60px;padding-top:22px;color:v
 </section>
 
 <section id="carrera">
-  <div class="shead"><span class="n">08</span><div><h2>Lo que decide el kilómetro 32</h2>
+  <div class="shead"><span class="n">10</span><div><h2>Lo que decide el kilómetro 32</h2>
   <p class="sub">La sección que le falta por completo al plan de tu amigo, y la que más determina el resultado.</p></div></div>
   <div class="grid2">
     <div class="read">
@@ -669,7 +870,7 @@ footer{border-top:1px solid var(--line);margin-top:60px;padding-top:22px;color:v
   <div class="note"><b>Pide una analítica esta semana y repítela en la semana 13:</b> ferritina, hemograma, vitamina D, TSH, perfil lipídico y función renal. La <b>ferritina</b> es la clave — los corredores pierden hierro por el impacto del pie, el sudor y microsangrado intestinal, y a 83 kg el impacto es mayor. Ferritina baja produce <b>fatiga inexplicable y estancamiento del ritmo</b>, exactamente el síntoma que describes. Se corrige fácil si se detecta.</div>
 </section>
 <section id="otros">
-  <div class="shead"><span class="n">09</span><div><h2>Los factores que no tenías en la lista</h2>
+  <div class="shead"><span class="n">11</span><div><h2>Los factores que no tenías en la lista</h2>
   <p class="sub">Dijiste que en tu cabeza solo estaban dos cosas: entrenamiento y alimentación. Estas son las otras que mueven la aguja de verdad.</p></div></div>
   <div class="grid2">
     <div class="read">
@@ -724,7 +925,7 @@ footer{border-top:1px solid var(--line);margin-top:60px;padding-top:22px;color:v
 </section>
 
 <section id="fechas">
-  <div class="shead"><span class="n">10</span><div><h2>Fechas clave</h2>
+  <div class="shead"><span class="n">12</span><div><h2>Fechas clave</h2>
   <p class="sub">Ponlas en el calendario hoy. Y empieza por el test de la semana 1: sin ese número, el resto del plan es genérico.</p></div></div>
   <div class="scroll"><table class="dates">
     <tbody>

@@ -59,16 +59,24 @@ for s in S:
     if s["fase"] != cur:
         cur = s["fase"]; n,c,desc = FASE_META[cur]
         rows.append(f'<tr class="phasehead {c}"><th colspan="5"><span class="pname">{n}</span><span class="pdesc">{desc}</span></th></tr>')
+    d = s["dias"]
     m = s["largo_min"]
-    largo = f'{m//60}h{m%60:02d}' if m and m%60 else (f'{m//60}h' if m else '42,195 km')
+    if m:
+        largo_t = f'{m//60}h{m%60:02d}' if m%60 else f'{m//60}h'
+        largo = f'<b>{largo_t}</b><span>~{d["sab"]:g} km · {s["largo_desc"]}</span>'
+    else:
+        largo = f'<b>42,195</b><span>km · {s["largo_desc"]}</span>'
+    dom = f'{d["dom"]:g}' if d["dom"] else '<span class="off">—</span>'
     hito = f'<span class="pill">{HITOS[s["semana"]]}</span>' if s["semana"] in HITOS else ''
     rows.append(
       f'<tr class="{FASE_META[s["fase"]][1]}">'
       f'<td class="wk"><b>{s["semana"]}</b><span>{s["etiqueta"]}</span></td>'
       f'<td class="km"><b>{s["km"]}</b></td>'
-      f'<td class="lng"><b>{largo}</b><span>{s["largo_desc"]}</span></td>'
-      f'<td class="qty">{s["calidad"]}</td>'
-      f'<td class="fcs">{hito}{s["foco"]}</td></tr>')
+      f'<td class="ez">{d["lun"]:g}</td>'
+      f'<td class="qty">{hito}{s["calidad"]}<span>~{d["mie"]:g} km con calentamiento</span></td>'
+      f'<td class="ez">{d["jue"]:g}</td>'
+      f'<td class="lng">{largo}</td>'
+      f'<td class="ez">{dom}</td></tr>')
 ROWS = "\n".join(rows)
 open("/tmp/claude-0/-home-user-training/a7cf7ce3-b7b3-56e7-b793-4b98c8a437f5/scratchpad/_frag.json","w").write(json.dumps({"svg":SVG,"rows":ROWS}))
 print("svg:", len(SVG), "chars · rows:", len(ROWS), "chars")

@@ -12,7 +12,15 @@
    "foco": "Calibracion. Cero intensidad fuera del test.",
    "inicio": "2026-09-07",
    "fin": "2026-09-13",
-   "etiqueta": "7 sep - 13 sep"
+   "etiqueta": "7 sep - 13 sep",
+   "dias": {
+    "lun": 5.0,
+    "mie": 6.0,
+    "jue": 6.0,
+    "dom": 0.0,
+    "sab": 11.0,
+    "pace_facil": "8:15"
+   }
   },
   {
    "semana": 2,
@@ -24,7 +32,15 @@
    "foco": "Cadencia: subir 5% respecto a tu media actual.",
    "inicio": "2026-09-14",
    "fin": "2026-09-20",
-   "etiqueta": "14 sep - 20 sep"
+   "etiqueta": "14 sep - 20 sep",
+   "dias": {
+    "lun": 5.5,
+    "mie": 6.5,
+    "jue": 6.5,
+    "dom": 0.0,
+    "sab": 13.0,
+    "pace_facil": "8:13"
+   }
   },
   {
    "semana": 3,
@@ -36,7 +52,15 @@
    "foco": "Primer estimulo. Nada de series en pista.",
    "inicio": "2026-09-21",
    "fin": "2026-09-27",
-   "etiqueta": "21 sep - 27 sep"
+   "etiqueta": "21 sep - 27 sep",
+   "dias": {
+    "lun": 6.5,
+    "mie": 7.5,
+    "jue": 7.5,
+    "dom": 0.0,
+    "sab": 14.5,
+    "pace_facil": "8:10"
+   }
   },
   {
    "semana": 4,
@@ -48,7 +72,15 @@
    "foco": "DESCARGA. Reevaluar tibial posterior.",
    "inicio": "2026-09-28",
    "fin": "2026-10-04",
-   "etiqueta": "28 sep - 4 oct"
+   "etiqueta": "28 sep - 4 oct",
+   "dias": {
+    "lun": 5.0,
+    "mie": 5.5,
+    "jue": 5.5,
+    "dom": 0.0,
+    "sab": 11.0,
+    "pace_facil": "8:08"
+   }
   },
   {
    "semana": 5,
@@ -60,7 +92,15 @@
    "foco": "Empieza practica de nutricion en carrera (30 g/h).",
    "inicio": "2026-10-05",
    "fin": "2026-10-11",
-   "etiqueta": "5 oct - 11 oct"
+   "etiqueta": "5 oct - 11 oct",
+   "dias": {
+    "lun": 6.0,
+    "mie": 7.0,
+    "jue": 6.0,
+    "dom": 4.0,
+    "sab": 15.0,
+    "pace_facil": "8:05"
+   }
   },
   {
    "semana": 6,
@@ -72,7 +112,15 @@
    "foco": "Nutricion 40 g/h. Medir tasa de sudoracion.",
    "inicio": "2026-10-12",
    "fin": "2026-10-18",
-   "etiqueta": "12 oct - 18 oct"
+   "etiqueta": "12 oct - 18 oct",
+   "dias": {
+    "lun": 6.5,
+    "mie": 7.5,
+    "jue": 7.0,
+    "dom": 4.0,
+    "sab": 17.0,
+    "pace_facil": "8:03"
+   }
   },
   {
    "semana": 7,
@@ -84,7 +132,15 @@
    "foco": "Cuestas = fuerza sin impacto. Clave para tu tibial.",
    "inicio": "2026-10-19",
    "fin": "2026-10-25",
-   "etiqueta": "19 oct - 25 oct"
+   "etiqueta": "19 oct - 25 oct",
+   "dias": {
+    "lun": 7.0,
+    "mie": 8.0,
+    "jue": 7.5,
+    "dom": 4.5,
+    "sab": 18.5,
+    "pace_facil": "8:01"
+   }
   },
   {
    "semana": 8,
@@ -96,7 +152,15 @@
    "foco": "DESCARGA + control. Reindexar ritmos.",
    "inicio": "2026-10-26",
    "fin": "2026-11-01",
-   "etiqueta": "26 oct - 1 nov"
+   "etiqueta": "26 oct - 1 nov",
+   "dias": {
+    "lun": 5.5,
+    "mie": 6.5,
+    "jue": 6.0,
+    "dom": 3.5,
+    "sab": 13.0,
+    "pace_facil": "7:58"
+   }
   },
   {
    "semana": 9,
@@ -108,7 +172,15 @@
    "foco": "Nutricion 50 g/h.",
    "inicio": "2026-11-02",
    "fin": "2026-11-08",
-   "etiqueta": "2 nov - 8 nov"
+   "etiqueta": "2 nov - 8 nov",
+   "dias": {
+    "lun": 7.5,
+    "mie": 8.5,
+    "jue": 8.0,
+    "dom": 5.0,
+    "sab": 17.0,
+    "pace_facil": "7:56"
+   }
   },
   {
    "semana": 10,
@@ -120,7 +192,15 @@
    "foco": "Primer bloque largo de umbral.",
    "inicio": "2026-11-09",
    "fin": "2026-11-15",
-   "etiqueta": "9 nov - 15 nov"
+   "etiqueta": "9 nov - 15 nov",
+   "dias": {
+    "lun": 8.0,
+    "mie": 9.5,
+    "jue": 8.5,
+    "dom": 5.5,
+    "sab": 19.0,
+    "pace_facil": "7:53"
+   }
   },
   {
    "semana": 11,
@@ -132,7 +212,15 @@
    "foco": "Semana mas dura de la Fase 1.",
    "inicio": "2026-11-16",
    "fin": "2026-11-22",
-   "etiqueta": "16 nov - 22 nov"
+   "etiqueta": "16 nov - 22 nov",
+   "dias": {
+    "lun": 8.5,
+    "mie": 10.0,
+    "jue": 9.0,
+    "dom": 5.5,
+    "sab": 21.0,
+    "pace_facil": "7:51"
+   }
   },
   {
    "semana": 12,
@@ -144,7 +232,15 @@
    "foco": "DESCARGA. Fin de la fase de perdida de grasa.",
    "inicio": "2026-11-23",
    "fin": "2026-11-29",
-   "etiqueta": "23 nov - 29 nov"
+   "etiqueta": "23 nov - 29 nov",
+   "dias": {
+    "lun": 6.5,
+    "mie": 7.5,
+    "jue": 6.5,
+    "dom": 4.0,
+    "sab": 15.5,
+    "pace_facil": "7:49"
+   }
   },
   {
    "semana": 13,
@@ -156,7 +252,15 @@
    "foco": "Aparece el ritmo maraton (RM). Nutricion 60 g/h.",
    "inicio": "2026-11-30",
    "fin": "2026-12-06",
-   "etiqueta": "30 nov - 6 dec"
+   "etiqueta": "30 nov - 6 dec",
+   "dias": {
+    "lun": 8.5,
+    "mie": 10.0,
+    "jue": 9.0,
+    "dom": 5.5,
+    "sab": 19.5,
+    "pace_facil": "7:46"
+   }
   },
   {
    "semana": 14,
@@ -164,23 +268,39 @@
    "km": 60,
    "largo_min": 165,
    "largo_desc": "2x20' a RM (uno a mitad, otro al final)",
-   "calidad": "VO2 5x3' fuerte / 2' trote",
-   "foco": "Semana pico del bloque.",
+   "calidad": "VO2max 5x3' fuerte / 2' trote",
+   "foco": "Primer trabajo de VO2max del plan.",
    "inicio": "2026-12-07",
    "fin": "2026-12-13",
-   "etiqueta": "7 dec - 13 dec"
+   "etiqueta": "7 dec - 13 dec",
+   "dias": {
+    "lun": 10.0,
+    "mie": 11.5,
+    "jue": 10.5,
+    "dom": 6.5,
+    "sab": 21.5,
+    "pace_facil": "7:44"
+   }
   },
   {
    "semana": 15,
    "fase": "F2",
    "km": 45,
    "largo_min": 127,
-   "largo_desc": "MEDIA MARATON DE CONTROL (dom 20 dic) a tope",
+   "largo_desc": "MEDIA MARATON DE CONTROL a tope",
    "calidad": "Solo activacion 3x1' el miercoles",
    "foco": "Este resultado FIJA tu ritmo de maraton real.",
    "inicio": "2026-12-14",
    "fin": "2026-12-20",
-   "etiqueta": "14 dec - 20 dec"
+   "etiqueta": "14 dec - 20 dec",
+   "dias": {
+    "lun": 6.0,
+    "mie": 7.0,
+    "jue": 6.5,
+    "dom": 4.0,
+    "sab": 21.1,
+    "pace_facil": "7:41"
+   }
   },
   {
    "semana": 16,
@@ -189,10 +309,18 @@
    "largo_min": 120,
    "largo_desc": "Continuo suave, sin estructura",
    "calidad": "Fartlek libre 20' por sensacion",
-   "foco": "Fiestas. Recuperacion del 21K. Volumen flexible.",
+   "foco": "Semana amortiguadora: recuperacion del 21K.",
    "inicio": "2026-12-21",
    "fin": "2026-12-27",
-   "etiqueta": "21 dec - 27 dec"
+   "etiqueta": "21 dec - 27 dec",
+   "dias": {
+    "lun": 7.0,
+    "mie": 8.0,
+    "jue": 7.0,
+    "dom": 4.5,
+    "sab": 15.5,
+    "pace_facil": "7:39"
+   }
   },
   {
    "semana": 17,
@@ -204,7 +332,15 @@
    "foco": "Retomar estructura. Nutricion 70 g/h.",
    "inicio": "2026-12-28",
    "fin": "2027-01-03",
-   "etiqueta": "28 dec - 3 jan"
+   "etiqueta": "28 dec - 3 jan",
+   "dias": {
+    "lun": 8.0,
+    "mie": 9.0,
+    "jue": 8.0,
+    "dom": 5.0,
+    "sab": 21.5,
+    "pace_facil": "7:37"
+   }
   },
   {
    "semana": 18,
@@ -212,11 +348,19 @@
    "km": 58,
    "largo_min": 180,
    "largo_desc": "2x25' a RM",
-   "calidad": "VO2 6x3' / 2' trote",
+   "calidad": "VO2max 6x3' / 2' trote",
    "foco": "Empieza aclimatacion al calor (correr en Medellin).",
    "inicio": "2027-01-04",
    "fin": "2027-01-10",
-   "etiqueta": "4 jan - 10 jan"
+   "etiqueta": "4 jan - 10 jan",
+   "dias": {
+    "lun": 9.0,
+    "mie": 10.0,
+    "jue": 9.0,
+    "dom": 6.0,
+    "sab": 24.0,
+    "pace_facil": "7:34"
+   }
   },
   {
    "semana": 19,
@@ -228,7 +372,15 @@
    "foco": "Sesion mas especifica del plan.",
    "inicio": "2027-01-11",
    "fin": "2027-01-17",
-   "etiqueta": "11 jan - 17 jan"
+   "etiqueta": "11 jan - 17 jan",
+   "dias": {
+    "lun": 9.5,
+    "mie": 11.0,
+    "jue": 9.5,
+    "dom": 6.0,
+    "sab": 26.0,
+    "pace_facil": "7:32"
+   }
   },
   {
    "semana": 20,
@@ -240,7 +392,15 @@
    "foco": "DESCARGA antes del pico.",
    "inicio": "2027-01-18",
    "fin": "2027-01-24",
-   "etiqueta": "18 jan - 24 jan"
+   "etiqueta": "18 jan - 24 jan",
+   "dias": {
+    "lun": 8.5,
+    "mie": 9.5,
+    "jue": 8.5,
+    "dom": 5.5,
+    "sab": 16.0,
+    "pace_facil": "7:29"
+   }
   },
   {
    "semana": 21,
@@ -252,7 +412,15 @@
    "foco": "Semana de mayor carga de todo el plan.",
    "inicio": "2027-01-25",
    "fin": "2027-01-31",
-   "etiqueta": "25 jan - 31 jan"
+   "etiqueta": "25 jan - 31 jan",
+   "dias": {
+    "lun": 10.0,
+    "mie": 11.5,
+    "jue": 10.5,
+    "dom": 6.5,
+    "sab": 26.0,
+    "pace_facil": "7:27"
+   }
   },
   {
    "semana": 22,
@@ -264,7 +432,15 @@
    "foco": "Ensayo general: ropa, zapatillas, geles, desayuno.",
    "inicio": "2027-02-01",
    "fin": "2027-02-07",
-   "etiqueta": "1 feb - 7 feb"
+   "etiqueta": "1 feb - 7 feb",
+   "dias": {
+    "lun": 8.5,
+    "mie": 10.0,
+    "jue": 9.0,
+    "dom": 5.5,
+    "sab": 22.5,
+    "pace_facil": "7:25"
+   }
   },
   {
    "semana": 23,
@@ -276,7 +452,15 @@
    "foco": "TAPER 1: -28% volumen, intensidad intacta.",
    "inicio": "2027-02-08",
    "fin": "2027-02-14",
-   "etiqueta": "8 feb - 14 feb"
+   "etiqueta": "8 feb - 14 feb",
+   "dias": {
+    "lun": 7.0,
+    "mie": 8.0,
+    "jue": 7.5,
+    "dom": 4.5,
+    "sab": 18.5,
+    "pace_facil": "7:22"
+   }
   },
   {
    "semana": 24,
@@ -284,11 +468,19 @@
    "km": 36,
    "largo_min": 105,
    "largo_desc": "6 km a RM",
-   "calidad": "4x1000 m a ritmo 10 km",
+   "calidad": "VO2max 4x1000 m a ritmo 10 km",
    "foco": "TAPER 2: -44%. Cortar pliometria.",
    "inicio": "2027-02-15",
    "fin": "2027-02-21",
-   "etiqueta": "15 feb - 21 feb"
+   "etiqueta": "15 feb - 21 feb",
+   "dias": {
+    "lun": 5.5,
+    "mie": 6.5,
+    "jue": 6.0,
+    "dom": 3.5,
+    "sab": 14.5,
+    "pace_facil": "7:20"
+   }
   },
   {
    "semana": 25,
@@ -297,25 +489,65 @@
    "largo_min": 75,
    "largo_desc": "4 km a RM",
    "calidad": "3x1600 m a RM",
-   "foco": "TAPER 3: -60%. Empieza carga de carbohidratos jueves.",
+   "foco": "TAPER 3: -60%. Empieza carga de carbos el jueves.",
    "inicio": "2027-02-22",
    "fin": "2027-02-28",
-   "etiqueta": "22 feb - 28 feb"
+   "etiqueta": "22 feb - 28 feb",
+   "dias": {
+    "lun": 4.0,
+    "mie": 4.5,
+    "jue": 4.0,
+    "dom": 2.5,
+    "sab": 10.5,
+    "pace_facil": "7:17"
+   }
   },
   {
    "semana": 26,
    "fase": "RACE",
    "km": 54,
    "largo_min": 0,
-   "largo_desc": "MARATON 42.195 km - domingo 7 de marzo",
+   "largo_desc": "MARATON 42,195 km - domingo",
    "calidad": "2x2 km a RM el martes",
    "foco": "Semana de carrera. 12 km faciles + la maraton.",
    "inicio": "2027-03-01",
    "fin": "2027-03-07",
-   "etiqueta": "1 mar - 7 mar"
+   "etiqueta": "1 mar - 7 mar",
+   "dias": {
+    "lun": 4.5,
+    "mie": 4.0,
+    "jue": 3.0,
+    "dom": 0.0,
+    "sab": 42.195,
+    "pace_facil": "7:15"
+   }
   }
  ],
  "ritmos": [
+  {
+   "test5k": "36:00",
+   "regenerativo": "9:41",
+   "facil": "9:06",
+   "maraton": "7:51",
+   "umbral": "7:29",
+   "intervalos": "7:06",
+   "pred_10k": "1:15:03",
+   "pred_21k": "2:45:36",
+   "maraton_medellin": "5:34:55",
+   "maraton_medellin_pace": "7:56"
+  },
+  {
+   "test5k": "34:00",
+   "regenerativo": "9:17",
+   "facil": "8:42",
+   "maraton": "7:27",
+   "umbral": "7:05",
+   "intervalos": "6:42",
+   "pred_10k": "1:10:53",
+   "pred_21k": "2:36:24",
+   "maraton_medellin": "5:16:19",
+   "maraton_medellin_pace": "7:30"
+  },
   {
    "test5k": "32:00",
    "regenerativo": "8:53",
@@ -323,9 +555,10 @@
    "maraton": "7:03",
    "umbral": "6:41",
    "intervalos": "6:18",
-   "pred_10k": 4003.068521629906,
-   "pred_21k": 8832.382719852645,
-   "pred_42k": 18414.913144182323
+   "pred_10k": "1:06:43",
+   "pred_21k": "2:27:12",
+   "maraton_medellin": "4:57:42",
+   "maraton_medellin_pace": "7:03"
   },
   {
    "test5k": "30:00",
@@ -334,9 +567,10 @@
    "maraton": "6:39",
    "umbral": "6:17",
    "intervalos": "5:54",
-   "pred_10k": 3752.8767390280373,
-   "pred_21k": 8280.358799861855,
-   "pred_42k": 17263.981072670926
+   "pred_10k": "1:02:33",
+   "pred_21k": "2:18:00",
+   "maraton_medellin": "4:39:06",
+   "maraton_medellin_pace": "6:37"
   },
   {
    "test5k": "28:00",
@@ -345,9 +579,10 @@
    "maraton": "6:15",
    "umbral": "5:53",
    "intervalos": "5:30",
-   "pred_10k": 3502.684956426168,
-   "pred_21k": 7728.334879871064,
-   "pred_42k": 16113.049001159532
+   "pred_10k": "58:23",
+   "pred_21k": "2:08:48",
+   "maraton_medellin": "4:20:30",
+   "maraton_medellin_pace": "6:10"
   },
   {
    "test5k": "26:00",
@@ -356,21 +591,12 @@
    "maraton": "5:51",
    "umbral": "5:29",
    "intervalos": "5:06",
-   "pred_10k": 3252.493173824299,
-   "pred_21k": 7176.310959880274,
-   "pred_42k": 14962.116929648137
-  },
-  {
-   "test5k": "24:00",
-   "regenerativo": "7:17",
-   "facil": "6:42",
-   "maraton": "5:27",
-   "umbral": "5:05",
-   "intervalos": "4:42",
-   "pred_10k": 3002.3013912224296,
-   "pred_21k": 6624.287039889484,
-   "pred_42k": 13811.184858136741
+   "pred_10k": "54:12",
+   "pred_21k": "1:59:36",
+   "maraton_medellin": "4:01:53",
+   "maraton_medellin_pace": "5:44"
   }
  ],
- "altitud_ganancia": 0.03
+ "altitud_ganancia": 0.03,
+ "aviso": null
 }

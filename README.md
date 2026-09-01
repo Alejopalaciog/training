@@ -5,9 +5,9 @@
 
 | | |
 |---|---|
-| Punto de partida | 83 kg · 20-30 km/semana · largo máximo 30 km @ 8:00/km |
-| Objetivo principal | **Terminar sano entre 4:30 y 4:40** (6:24-6:38/km) |
-| Objetivo ambicioso | 4:20 (6:10/km) si todo sale bien |
+| Punto de partida | 27 años · 1,72 m · 83 kg · FC reposo 52 · 20-30 km/semana · mejor 21K 2:44 |
+| Objetivo principal | **Terminar sano entre 4:45 y 4:55** (6:45-7:00/km) |
+| Objetivo ambicioso | 4:30 (6:24/km) si todo sale bien |
 | Peso objetivo | 77 kg en la línea de salida (también categoría de jiujitsu) |
 | Volumen total | 1.175 km · pico de 64 km en la semana 21 |
 | Se mantiene | 3 días de gimnasio + jiujitsu semanal |
@@ -23,6 +23,17 @@
 | 04 | [Nutrición](docs/04-nutricion.md) | Macros por tipo de día, los 6 kg y cuándo, comida real colombiana, nutrición en carrera, carga de carbos, contraste con el plan de tu amigo |
 | 05 | [Otros factores](docs/05-otros-factores.md) | Sueño, calor, estrategia de carrera, logística, elegir la carrera |
 | 06 | [Registro y alertas](docs/06-registro-y-alertas.md) | Qué medir, semáforo semanal, cómo retomar tras parar, fechas clave |
+| 07 | [**Glosario**](docs/07-glosario.md) | Qué significa cada término: umbral, RM, rectas, fartlek, VO2max, RIR, negative split… |
+| 08 | [Mensaje para tu entrenador](docs/08-mensaje-para-tu-entrenador.md) | Texto listo para copiar y pegar, con el porqué de cada ajuste |
+
+## Otros archivos
+
+| Archivo | Qué es |
+|---|---|
+| `Plan-Maraton-26-Semanas.pdf` | El plan completo en PDF, para el celular |
+| `plan-maraton.html` | La página consultable (la misma que está publicada) |
+| `data/plan.json` | El plan en datos: semanas, días, ritmos. Lo consumen los generadores |
+| `data/semana-carrera-nutricion.csv` | La tabla de tu amigo, corregida y adaptada a la semana de carrera |
 
 ## Empieza por aquí
 
@@ -43,8 +54,22 @@
 El calendario y las tablas de ritmos se generan desde un script, no están escritos a mano:
 
 ```bash
-python3 scripts/generar_plan.py      # recalcula calendario y ritmos -> data/plan.json
-python3 scripts/render_plan_md.py    # regenera docs/01-plan-26-semanas.md
+npm run plan     # calendario + ritmos + docs/01 + fragmentos de la página
+npm run pdf      # regenera Plan-Maraton-26-Semanas.pdf desde plan-maraton.html
 ```
 
-Si cambia la fecha de la carrera o quieres ajustar volúmenes, edita `SEMANAS` en `scripts/generar_plan.py` y vuelve a ejecutar ambos.
+### Cambiar la fecha de la carrera
+
+```bash
+python3 scripts/generar_plan.py --carrera 2027-05-16          # mueve la maratón
+python3 scripts/generar_plan.py --carrera 2027-05-16 --extra espec
+```
+
+El script recalcula **todo** hacia atrás desde la fecha que le des:
+
+- **Si hay más de 26 semanas**, inserta semanas extra. `--extra base` (por defecto) añade base aeróbica; `--extra espec` añade trabajo específico.
+- **Si hay menos de 26**, recorta semanas de la Fase 1 y **avisa**. Por debajo de 22 semanas el riesgo de lesión sube de forma significativa.
+
+Después de cambiar la fecha, ejecuta `npm run plan` y luego `npm run pdf` para regenerar los documentos y el PDF.
+
+La primera vez, para el PDF: `npm install` (necesita Chromium; en un equipo normal, `npx playwright install chromium`).
