@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 1022" width="760" height="1022" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<rect width="760" height="1022" fill="#FBFCFA"/>
+<rect x="0" y="0" width="760" height="104" fill="#131A17"/>
+<text x="28" y="42" font-size="24" font-weight="700" fill="#FBFCFA">Plan de carrera · domingo 6 sep</text>
+<text x="28" y="66" font-size="13" fill="#9FB0AC">Maratón Medellín · salida 5:00 AM · Parque de las Luces</text>
+<text x="28" y="88" font-size="13" font-weight="700" fill="#E0855A">REGLA DEL RELOJ: en punto = GEL · y media = BOCADILLO</text>
+<text x="28" y="132" font-size="12" font-weight="700" fill="#5C6764" letter-spacing="0.8">HORA</text>
+<text x="120" y="132" font-size="12" font-weight="700" fill="#5C6764" letter-spacing="0.8">QUÉ TOMAS</text>
+<text x="610" y="132" font-size="12" font-weight="700" fill="#5C6764" letter-spacing="0.8">CHO ACUM.</text>
+<text x="718" y="132" font-size="12" font-weight="700" fill="#5C6764" letter-spacing="0.8" text-anchor="end">CAF.</text>
+<rect x="20" y="146" width="720" height="38" fill="#131A17"/>
+<text x="34" y="172" font-size="15" font-weight="700" fill="#FBFCFA">5:00</text>
+<text x="126" y="172" font-size="15" font-weight="700" fill="#FBFCFA">SALIDA · Parque de las Luces</text>
+<line x1="20" y1="192" x2="740" y2="192" stroke="#D3D9D2"/>
+<rect x="20" y="192" width="4" height="38" fill="#0E4F52"/>
+<text x="36" y="218" font-size="16" font-weight="700" fill="#131A17">5:30</text>
+<text x="126" y="218" font-size="14" font-weight="600" fill="#0E4F52">Bocadillo veleño 30 g</text>
+<text x="610" y="218" font-size="13" fill="#5C6764">22 g</text>
+<rect x="20" y="238" width="720" height="38" fill="#FAF0E7"/>
+<line x1="20" y1="238" x2="740" y2="238" stroke="#D3D9D2"/>
+<rect x="20" y="238" width="4" height="38" fill="#A6521E"/>
+<text x="36" y="264" font-size="16" font-weight="700" fill="#131A17">6:00</text>
+<text x="126" y="264" font-size="14" font-weight="600" fill="#A6521E">UP GEL nº1</text>
+<text x="610" y="264" font-size="13" fill="#5C6764">40 g</text>
+<text x="718" y="264" font-size="13" font-weight="400" fill="#5C6764" text-anchor="end">60 mg</text>
+<line x1="20" y1="284" x2="740" y2="284" stroke="#D3D9D2"/>
+<rect x="20" y="284" width="4" height="38" fill="#0E4F52"/>
+<text x="36" y="310" font-size="16" font-weight="700" fill="#131A17">6:30</text>
+<text x="126" y="310" font-size="14" font-weight="600" fill="#0E4F52">Bocadillo veleño 30 g</text>
+<text x="610" y="310" font-size="13" fill="#5C6764">62 g</text>
+<text x="718" y="310" font-size="13" font-weight="400" fill="#5C6764" text-anchor="end">60 mg</text>
+<rect x="20" y="330" width="720" height="38" fill="#FAF0E7"/>
+<line x1="20" y1="330" x2="740" y2="330" stroke="#D3D9D2"/>
+<rect x="20" y="330" width="4" height="38" fill="#A6521E"/>
+<text x="36" y="356" font-size="16" font-weight="700" fill="#131A17">7:00</text>
+<text x="126" y="356" font-size="14" font-weight="600" fill="#A6521E">UP GEL nº2</text>
+<text x="610" y="356" font-size="13" fill="#5C6764">80 g</text>
+<text x="718" y="356" font-size="13" font-weight="400" fill="#5C6764" text-anchor="end">120 mg</text>
+<line x1="20" y1="376" x2="740" y2="376" stroke="#D3D9D2"/>
+<rect x="20" y="376" width="4" height="38" fill="#0E4F52"/>
+<text x="36" y="402" font-size="16" font-weight="700" fill="#131A17">7:30</text>
+<text x="126" y="402" font-size="14" font-weight="600" fill="#0E4F52">Bocadillo veleño 30 g</text>
+<text x="610" y="402" font-size="13" fill="#5C6764">102 g</text>
+<text x="718" y="402" font-size="13" font-weight="400" fill="#5C6764" text-anchor="end">120 mg</text>
+<rect x="20" y="422" width="720" height="38" fill="#FAF0E7"/>
+<line x1="20" y1="422" x2="740" y2="422" stroke="#D3D9D2"/>
+<rect x="20" y="422" width="4" height="38" fill="#A6521E"/>
+<text x="36" y="448" font-size="16" font-weight="700" fill="#131A17">8:00</text>
+<text x="126" y="448" font-size="14" font-weight="600" fill="#A6521E">UP GEL nº3</text>
+<text x="610" y="448" font-size="13" fill="#5C6764">120 g</text>
+<text x="718" y="448" font-size="13" font-weight="400" fill="#5C6764" text-anchor="end">180 mg</text>
+<line x1="20" y1="468" x2="740" y2="468" stroke="#D3D9D2"/>
+<rect x="20" y="468" width="4" height="38" fill="#0E4F52"/>
+<text x="36" y="494" font-size="16" font-weight="700" fill="#131A17">8:30</text>
+<text x="126" y="494" font-size="14" font-weight="600" fill="#0E4F52">Bocadillo veleño 30 g + 2 dátiles</text>
+<text x="610" y="494" font-size="13" fill="#5C6764">172 g</text>
+<text x="718" y="494" font-size="13" font-weight="400" fill="#5C6764" text-anchor="end">180 mg</text>
+<rect x="20" y="514" width="720" height="38" fill="#FAF0E7"/>
+<line x1="20" y1="514" x2="740" y2="514" stroke="#D3D9D2"/>
+<rect x="20" y="514" width="4" height="38" fill="#A6521E"/>
+<text x="36" y="540" font-size="16" font-weight="700" fill="#131A17">9:00</text>
+<text x="126" y="540" font-size="14" font-weight="600" fill="#A6521E">UP GEL nº4</text>
+<text x="610" y="540" font-size="13" fill="#5C6764">190 g</text>
+<text x="718" y="540" font-size="13" font-weight="400" fill="#5C6764" text-anchor="end">240 mg</text>
+<line x1="20" y1="560" x2="740" y2="560" stroke="#D3D9D2"/>
+<rect x="20" y="560" width="4" height="38" fill="#0E4F52"/>
+<text x="36" y="586" font-size="16" font-weight="700" fill="#131A17">9:30</text>
+<text x="126" y="586" font-size="14" font-weight="600" fill="#0E4F52">Bocadillo veleño 30 g</text>
+<text x="610" y="586" font-size="13" fill="#5C6764">212 g</text>
+<text x="718" y="586" font-size="13" font-weight="400" fill="#5C6764" text-anchor="end">240 mg</text>
+<rect x="20" y="606" width="720" height="38" fill="#FAF0E7"/>
+<line x1="20" y1="606" x2="740" y2="606" stroke="#D3D9D2"/>
+<rect x="20" y="606" width="4" height="38" fill="#A6521E"/>
+<text x="36" y="632" font-size="16" font-weight="700" fill="#131A17">10:00</text>
+<text x="126" y="632" font-size="14" font-weight="600" fill="#A6521E">UP GEL nº5</text>
+<text x="610" y="632" font-size="13" fill="#5C6764">230 g</text>
+<text x="718" y="632" font-size="13" font-weight="700" fill="#A6521E" text-anchor="end">300 mg</text>
+<rect x="20" y="652" width="720" height="38" fill="#FAF0E7"/>
+<line x1="20" y1="652" x2="740" y2="652" stroke="#D3D9D2"/>
+<rect x="20" y="652" width="4" height="38" fill="#A6521E"/>
+<text x="36" y="678" font-size="16" font-weight="700" fill="#131A17">10:30</text>
+<text x="126" y="678" font-size="14" font-weight="600" fill="#A6521E">UP GEL nº6 · EL ÚLTIMO</text>
+<text x="610" y="678" font-size="13" fill="#5C6764">248 g</text>
+<text x="718" y="678" font-size="13" font-weight="700" fill="#A6521E" text-anchor="end">360 mg</text>
+<rect x="20" y="698" width="720" height="38" fill="#131A17"/>
+<text x="34" y="724" font-size="15" font-weight="700" fill="#FBFCFA">~10:45</text>
+<text x="126" y="724" font-size="15" font-weight="700" fill="#FBFCFA">META</text>
+<text x="28" y="774" font-size="13" font-weight="600" fill="#A6521E">NUNCA un séptimo gel. 6 geles = 360 mg de cafeína = 4,3 mg/kg.</text>
+<text x="28" y="797" font-size="13" font-weight="600" fill="#A6521E">Es ya 50 % más de lo máximo que has probado (4 geles = 240 mg).</text>
+<text x="28" y="820" font-size="13" font-weight="600" fill="#131A17">Sorbos de bebida todo el rato: ~250 ml por hora. Agua aparte si hace calor.</text>
+<text x="28" y="843" font-size="13" font-weight="600" fill="#131A17">Bebida (1 L): 65 g de panela + 2 g de sal + jugo de 1 limón.</text>
+<text x="28" y="866" font-size="13" font-weight="600" fill="#131A17">Si te empalaga el dulce: enjuaga con agua sola y sigue. NO dejes de comer.</text>
+<text x="28" y="889" font-size="13" font-weight="600" fill="#0E4F52">km 0-10: 15-20 s/km MÁS LENTO de lo que te pida el cuerpo. Que te adelanten.</text>
+<text x="28" y="926" font-size="12" fill="#5C6764">Desayuno 3:00 AM · 120 g de pan + 60 g de arequipe + café + 400 ml de agua con sal, limón y 40 g de panela = 132 g CHO</text>
+</svg>

@@ -66,7 +66,7 @@ comidas["Desayuno"] = [
  celda([("arepa",200),("arequipe",40),("platano",200),("panela",20)], "café", "CARGA día 1")[0],
  celda([("arepa",200),("arequipe",40),("platano",250),("panela",30)], "café", "CARGA día 2")[0],
  celda([("arepa",200),("arequipe",40),("platano",200),("panela",20)], "café", "CARGA día 3 · sin fibra")[0],
- "3:00 AM (2 h antes) · " + celda([("pan",90),("arequipe",40),("platano",150),("panela",30)], "café solo", "SIN fibra, SIN grasa, SIN lácteos")[0],
+ "3:00 AM (2 h antes) · TU RUTINA DE SIEMPRE: " + celda([("pan",120),("arequipe",60)], "café solo + 400 ml de agua con sal y limón CON 40 g de panela disuelta (+36 g CHO)", "132 g CHO en total · nada nuevo")[0],
 ]
 comidas["Media mañana"] = [
  celda([("yogur",200),("banano",120)])[0],
@@ -84,7 +84,7 @@ comidas["Almuerzo"] = [
  celda([("pollo",150),("arroz",400),("platano",150)], "calabacín cocido 100 g", "CARGA")[0],
  celda([("pollo",150),("arroz",450),("platano",200),("panela",30)], "calabacín cocido 100 g", "CARGA")[0],
  celda([("pollo",150),("arroz",450),("papa",200)], "", "CERO verduras · última comida grande del día")[0],
- "DURANTE LA CARRERA · 1 gel cada 35-40 min desde el minuto 20 (8-9 geles ≈ 210 g) + 200 ml de bebida deportiva en cada avituallamiento (≈ 100 g) = 45-55 g/h",
+ "DURANTE LA CARRERA · REGLA DEL RELOJ: EN PUNTO (6:00, 7:00, 8:00, 9:00, 10:00) = 1 UP GEL · Y MEDIA (5:30, 6:30, 7:30...) = 1 bocadillo de 30 g · sorbos de bebida todo el rato (~250 ml/h). MÁXIMO 6 GELES EN TODA LA CARRERA (tope de cafeína: 360 mg). Total ≈ 320 g = 56 g/h",
 ]
 comidas["Media tarde"] = [
  celda([("banano",120)], "")[0],
@@ -134,14 +134,14 @@ comidas["Suplementos"] = [
  "Creatina 5 g · Omega 3 · Magnesio","Creatina 5 g · Omega 3 · Magnesio",
  "Creatina 5 g · Omega 3 · Magnesio","Creatina 5 g · Omega 3 · Magnesio",
  "Creatina 5 g · Omega 3 · Magnesio · NADA nuevo",
- "Solo el café que tomas normalmente. NO experimentes con cafeína hoy.",
+ "TOPE DE CAFEÍNA: 6 UP GEL = 360 mg (4,3 mg/kg). Tu café de las 2:45 aparte. NO tomes un séptimo gel: llevarías más del doble de lo que has probado nunca.",
 ]
 comidas["QUÉ EVITAR"] = [
  "Alcohol","Alcohol","Alcohol · empezar a bajar fibra",
  "Alcohol · frito · exceso de grasa (compite con los carbos) · nueces y frutos secos",
  "Alcohol · frito · legumbres · verduras crudas · brócoli, coliflor, repollo (gases)",
  "TODA la fibra: verduras, legumbres, integrales, cáscaras, semillas, el jugo verde. Nada frito, nada picante, NADA que no hayas comido antes.",
- "Huevo, lácteos, frito, fibra y cualquier alimento nuevo.",
+ "Huevo, lácteos, frito, fibra y cualquier alimento nuevo. Y NO pases de 6 geles: son 60 mg de cafeína cada uno.",
 ]
 
 # --------- objetivo de carbos por dia (calculado, no inventado) ----------
@@ -262,3 +262,78 @@ s.append('</svg>')
 svg_path = os.path.join(BASE,"data","semana-carrera.svg")
 open(svg_path,"w",encoding="utf-8").write("\n".join(s))
 print("escrito", svg_path, f"({W:.0f}x{H:.0f} px)")
+
+# ===============  SVG 2: tarjeta de carrera (formato celular)  ===============
+# Regla del reloj: gel en punto, bocadillo y media. Tope 6 geles por la cafeina.
+PLAN = [  # (hora, tipo, que, CHO, cafeina_acumulada)
+ ("5:00","salida","SALIDA · Parque de las Luces",0,0),
+ ("5:30","boca","Bocadillo veleño 30 g",22,0),
+ ("6:00","gel","UP GEL nº1",18,60),
+ ("6:30","boca","Bocadillo veleño 30 g",22,60),
+ ("7:00","gel","UP GEL nº2",18,120),
+ ("7:30","boca","Bocadillo veleño 30 g",22,120),
+ ("8:00","gel","UP GEL nº3",18,180),
+ ("8:30","boca","Bocadillo veleño 30 g + 2 dátiles",52,180),
+ ("9:00","gel","UP GEL nº4",18,240),
+ ("9:30","boca","Bocadillo veleño 30 g",22,240),
+ ("10:00","gel","UP GEL nº5",18,300),
+ ("10:30","gel","UP GEL nº6 · EL ÚLTIMO",18,360),
+ ("~10:45","meta","META",0,360),
+]
+RW, RH0 = 760, 192
+fila_h = 46
+RH = RH0 + len(PLAN)*fila_h + 232
+C = {"gel":"#A6521E","boca":"#0E4F52","salida":"#131A17","meta":"#131A17"}
+
+g = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {RW} {RH}" width="{RW}" height="{RH}" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">',
+     f'<rect width="{RW}" height="{RH}" fill="#FBFCFA"/>',
+     f'<rect x="0" y="0" width="{RW}" height="104" fill="#131A17"/>',
+     '<text x="28" y="42" font-size="24" font-weight="700" fill="#FBFCFA">Plan de carrera · domingo 6 sep</text>',
+     '<text x="28" y="66" font-size="13" fill="#9FB0AC">Maratón Medellín · salida 5:00 AM · Parque de las Luces</text>',
+     '<text x="28" y="88" font-size="13" font-weight="700" fill="#E0855A">REGLA DEL RELOJ: en punto = GEL · y media = BOCADILLO</text>']
+
+y = 132
+g.append(f'<text x="28" y="{y}" font-size="12" font-weight="700" fill="#5C6764" letter-spacing="0.8">HORA</text>')
+g.append(f'<text x="120" y="{y}" font-size="12" font-weight="700" fill="#5C6764" letter-spacing="0.8">QUÉ TOMAS</text>')
+g.append(f'<text x="{RW-150}" y="{y}" font-size="12" font-weight="700" fill="#5C6764" letter-spacing="0.8">CHO ACUM.</text>')
+g.append(f'<text x="{RW-42}" y="{y}" font-size="12" font-weight="700" fill="#5C6764" letter-spacing="0.8" text-anchor="end">CAF.</text>')
+y = RH0 - 22
+acum = 0
+for hora, tipo, que, cho, caf in PLAN:
+    acum += cho
+    col = C[tipo]
+    if tipo in ("salida","meta"):
+        g.append(f'<rect x="20" y="{y-24:.0f}" width="{RW-40}" height="{fila_h-8}" fill="#131A17"/>')
+        g.append(f'<text x="34" y="{y+2:.0f}" font-size="15" font-weight="700" fill="#FBFCFA">{hora}</text>')
+        g.append(f'<text x="126" y="{y+2:.0f}" font-size="15" font-weight="700" fill="#FBFCFA">{que}</text>')
+    else:
+        if tipo=="gel":
+            g.append(f'<rect x="20" y="{y-24:.0f}" width="{RW-40}" height="{fila_h-8}" fill="#FAF0E7"/>')
+        g.append(f'<line x1="20" y1="{y-24:.0f}" x2="{RW-20}" y2="{y-24:.0f}" stroke="#D3D9D2"/>')
+        g.append(f'<rect x="20" y="{y-24:.0f}" width="4" height="{fila_h-8}" fill="{col}"/>')
+        g.append(f'<text x="36" y="{y+2:.0f}" font-size="16" font-weight="700" fill="#131A17">{hora}</text>')
+        g.append(f'<text x="126" y="{y+2:.0f}" font-size="14" font-weight="600" fill="{col}">{que}</text>')
+        g.append(f'<text x="{RW-150}" y="{y+2:.0f}" font-size="13" fill="#5C6764">{acum} g</text>')
+        if caf:
+            aviso = "#A6521E" if caf>=300 else "#5C6764"
+            g.append(f'<text x="{RW-42}" y="{y+2:.0f}" font-size="13" font-weight="{"700" if caf>=300 else "400"}" fill="{aviso}" text-anchor="end">{caf} mg</text>')
+    y += fila_h
+
+y += 6
+notas = [
+ ("#A6521E","NUNCA un séptimo gel. 6 geles = 360 mg de cafeína = 4,3 mg/kg."),
+ ("#A6521E","Es ya 50 % más de lo máximo que has probado (4 geles = 240 mg)."),
+ ("#131A17","Sorbos de bebida todo el rato: ~250 ml por hora. Agua aparte si hace calor."),
+ ("#131A17","Bebida (1 L): 65 g de panela + 2 g de sal + jugo de 1 limón."),
+ ("#131A17","Si te empalaga el dulce: enjuaga con agua sola y sigue. NO dejes de comer."),
+ ("#0E4F52","km 0-10: 15-20 s/km MÁS LENTO de lo que te pida el cuerpo. Que te adelanten."),
+]
+for col, t in notas:
+    g.append(f'<text x="28" y="{y:.0f}" font-size="13" font-weight="600" fill="{col}">{t}</text>')
+    y += 23
+g.append(f'<text x="28" y="{y+14:.0f}" font-size="12" fill="#5C6764">Desayuno 3:00 AM · 120 g de pan + 60 g de arequipe + café + 400 ml de agua con sal, limón y 40 g de panela = 132 g CHO</text>')
+g.append('</svg>')
+
+rp = os.path.join(BASE,"data","plan-de-carrera.svg")
+open(rp,"w",encoding="utf-8").write("\n".join(g))
+print("escrito", rp, f"({RW}x{RH} px) · CHO total {acum} g · cafeína 360 mg")
