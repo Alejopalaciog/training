@@ -127,7 +127,7 @@ comidas["Hidratación"] = [
  "3-3,5 L · el glucógeno retiene agua: subir de peso es normal y es bueno",
  "3-3,5 L + 2 g de sal extra repartida en las comidas",
  "3 L + 2 g de sal extra · orina amarillo claro, NO transparente",
- "500 ml en las 2 h previas · durante: 400-600 ml/h · NUNCA ganes peso durante la carrera",
+ "500 ml en las 2 h previas · durante: 400-600 ml/h de TU suero hidratante (el de siempre) · lleva 2-3 sobres para rearmar en los avituallamientos · NUNCA ganes peso durante la carrera",
 ]
 comidas["Suplementos"] = [
  "Creatina 5 g · Omega 3 · Magnesio 300-400 mg (noche)",
@@ -323,8 +323,9 @@ y += 6
 notas = [
  ("#A6521E","NUNCA un séptimo gel. 6 geles = 360 mg de cafeína = 4,3 mg/kg."),
  ("#A6521E","Es ya 50 % más de lo máximo que has probado (4 geles = 240 mg)."),
- ("#131A17","Sorbos de bebida todo el rato: ~250 ml por hora. Agua aparte si hace calor."),
- ("#131A17","Bebida (1 L): 65 g de panela + 2 g de sal + jugo de 1 limón."),
+ ("#131A17","Termo con TU suero hidratante de siempre. Sorbos constantes, ~500 ml por hora."),
+ ("#131A17","500 ml no cubren 6 h: lleva 2-3 sobres en el bolsillo y rearma en los puestos."),
+ ("#131A17","Los 248 g de sólidos van solos: el suero hidrata, no alimenta. NO le eches panela."),
  ("#131A17","Si te empalaga el dulce: enjuaga con agua sola y sigue. NO dejes de comer."),
  ("#0E4F52","km 0-10: 15-20 s/km MÁS LENTO de lo que te pida el cuerpo. Que te adelanten."),
 ]

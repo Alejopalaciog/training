@@ -1,15 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2068 1188" width="2068" height="1188" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
-<rect width="2068" height="1188" fill="#FBFCFA"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2068 1229" width="2068" height="1229" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<rect width="2068" height="1229" fill="#FBFCFA"/>
 <text x="22" y="38" font-size="26" font-weight="700" fill="#131A17">Semana de carrera · Maratón Medellín</text>
 <text x="22" y="60" font-size="13" fill="#5C6764">Domingo 6 de septiembre de 2026 · 5:00 AM · Parque de las Luces · 83 kg · sin proteína en polvo, sin frutos secos · todo en gramos</text>
 <text x="22" y="78" font-size="12" fill="#A6521E" font-weight="600">Sin fase de vaciado. Carga de 3 días. La última fibra es el viernes por la mañana.</text>
-<rect x="170" y="96" width="268" height="1038" fill="#F4F6F3"/>
-<rect x="438" y="96" width="268" height="1038" fill="#F4F6F3"/>
-<rect x="706" y="96" width="268" height="1038" fill="#F4F6F3"/>
-<rect x="974" y="96" width="268" height="1038" fill="#FBF3EA"/>
-<rect x="1242" y="96" width="268" height="1038" fill="#F8EADC"/>
-<rect x="1510" y="96" width="268" height="1038" fill="#F5E2CE"/>
-<rect x="1778" y="96" width="268" height="1038" fill="#E4EFEE"/>
+<rect x="170" y="96" width="268" height="1079" fill="#F4F6F3"/>
+<rect x="438" y="96" width="268" height="1079" fill="#F4F6F3"/>
+<rect x="706" y="96" width="268" height="1079" fill="#F4F6F3"/>
+<rect x="974" y="96" width="268" height="1079" fill="#FBF3EA"/>
+<rect x="1242" y="96" width="268" height="1079" fill="#F8EADC"/>
+<rect x="1510" y="96" width="268" height="1079" fill="#F5E2CE"/>
+<rect x="1778" y="96" width="268" height="1079" fill="#E4EFEE"/>
 <text x="179" y="118" font-size="13.5" font-weight="700" fill="#5C6764">lunes 31 ago</text>
 <text x="179" y="136" font-size="10.5" font-weight="600" fill="#5C6764" letter-spacing="0.4">NORMAL</text>
 <text x="447" y="118" font-size="13.5" font-weight="700" fill="#5C6764">martes 1 sep</text>
@@ -253,66 +253,69 @@
 <text x="1519" y="891.0" font-size="11.0" font-weight="400" fill="#2C3835">3 L + 2 g de sal extra</text>
 <text x="1519" y="904.6" font-size="11.0" font-weight="400" fill="#2C3835">orina amarillo claro, NO transparente</text>
 <text x="1787" y="891.0" font-size="11.0" font-weight="400" fill="#2C3835">500 ml en las 2 h previas</text>
-<text x="1787" y="904.6" font-size="11.0" font-weight="400" fill="#2C3835">durante: 400-600 ml/h</text>
-<text x="1787" y="918.2" font-size="11.0" font-weight="400" fill="#2C3835">NUNCA ganes peso durante la carrera</text>
-<line x1="22" y1="930.8" x2="2046" y2="930.8" stroke="#D3D9D2" stroke-width="1"/>
-<text x="31" y="949.8" font-size="11" font-weight="700" fill="#131A17">Suplementos</text>
-<text x="179" y="949.8" font-size="11.0" font-weight="400" fill="#2C3835">Creatina 5 g</text>
-<text x="179" y="963.4" font-size="11.0" font-weight="400" fill="#2C3835">Omega 3</text>
-<text x="179" y="977.0" font-size="11.0" font-weight="400" fill="#2C3835">Magnesio 300-400 mg (noche)</text>
-<text x="447" y="949.8" font-size="11.0" font-weight="400" fill="#2C3835">Creatina 5 g</text>
-<text x="447" y="963.4" font-size="11.0" font-weight="400" fill="#2C3835">Omega 3</text>
-<text x="447" y="977.0" font-size="11.0" font-weight="400" fill="#2C3835">Magnesio</text>
-<text x="715" y="949.8" font-size="11.0" font-weight="400" fill="#2C3835">Creatina 5 g</text>
-<text x="715" y="963.4" font-size="11.0" font-weight="400" fill="#2C3835">Omega 3</text>
-<text x="715" y="977.0" font-size="11.0" font-weight="400" fill="#2C3835">Magnesio</text>
-<text x="983" y="949.8" font-size="11.0" font-weight="400" fill="#2C3835">Creatina 5 g</text>
-<text x="983" y="963.4" font-size="11.0" font-weight="400" fill="#2C3835">Omega 3</text>
-<text x="983" y="977.0" font-size="11.0" font-weight="400" fill="#2C3835">Magnesio</text>
-<text x="1251" y="949.8" font-size="11.0" font-weight="400" fill="#2C3835">Creatina 5 g</text>
-<text x="1251" y="963.4" font-size="11.0" font-weight="400" fill="#2C3835">Omega 3</text>
-<text x="1251" y="977.0" font-size="11.0" font-weight="400" fill="#2C3835">Magnesio</text>
-<text x="1519" y="949.8" font-size="11.0" font-weight="400" fill="#2C3835">Creatina 5 g</text>
-<text x="1519" y="963.4" font-size="11.0" font-weight="400" fill="#2C3835">Omega 3</text>
-<text x="1519" y="977.0" font-size="11.0" font-weight="400" fill="#2C3835">Magnesio</text>
-<text x="1519" y="990.6" font-size="11.0" font-weight="400" fill="#2C3835">NADA nuevo</text>
-<text x="1787" y="949.8" font-size="11.0" font-weight="400" fill="#2C3835">TOPE DE CAFEÍNA: 6 UP GEL = 360 mg (4,3</text>
-<text x="1787" y="963.4" font-size="11.0" font-weight="400" fill="#2C3835">mg/kg). Tu café de las 2:45 aparte. NO tomes</text>
-<text x="1787" y="977.0" font-size="11.0" font-weight="400" fill="#2C3835">un séptimo gel: llevarías más del doble de lo</text>
-<text x="1787" y="990.6" font-size="11.0" font-weight="400" fill="#2C3835">que has probado nunca.</text>
-<rect x="22" y="1003" width="2024" height="86" fill="#EDF0EC" opacity="0.75"/>
-<line x1="22" y1="1003.2" x2="2046" y2="1003.2" stroke="#D3D9D2" stroke-width="1"/>
-<text x="31" y="1022.2" font-size="11" font-weight="700" fill="#131A17">QUÉ EVITAR</text>
-<text x="179" y="1022.2" font-size="11.0" font-weight="600" fill="#131A17">Alcohol</text>
-<text x="447" y="1022.2" font-size="11.0" font-weight="600" fill="#131A17">Alcohol</text>
-<text x="715" y="1022.2" font-size="11.0" font-weight="600" fill="#131A17">Alcohol</text>
-<text x="715" y="1035.8" font-size="11.0" font-weight="600" fill="#131A17">empezar a bajar fibra</text>
-<text x="983" y="1022.2" font-size="11.0" font-weight="600" fill="#131A17">Alcohol</text>
-<text x="983" y="1035.8" font-size="11.0" font-weight="600" fill="#131A17">frito</text>
-<text x="983" y="1049.4" font-size="11.0" font-weight="600" fill="#131A17">exceso de grasa (compite con los carbos)</text>
-<text x="983" y="1063.0" font-size="11.0" font-weight="600" fill="#131A17">nueces y frutos secos</text>
-<text x="1251" y="1022.2" font-size="11.0" font-weight="600" fill="#131A17">Alcohol</text>
-<text x="1251" y="1035.8" font-size="11.0" font-weight="600" fill="#131A17">frito</text>
-<text x="1251" y="1049.4" font-size="11.0" font-weight="600" fill="#131A17">legumbres</text>
-<text x="1251" y="1063.0" font-size="11.0" font-weight="600" fill="#131A17">verduras crudas</text>
-<text x="1251" y="1076.6" font-size="11.0" font-weight="600" fill="#131A17">brócoli, coliflor, repollo (gases)</text>
-<text x="1519" y="1022.2" font-size="11.0" font-weight="600" fill="#131A17">TODA la fibra: verduras, legumbres,</text>
-<text x="1519" y="1035.8" font-size="11.0" font-weight="600" fill="#131A17">integrales, cáscaras, semillas, el jugo</text>
-<text x="1519" y="1049.4" font-size="11.0" font-weight="600" fill="#131A17">verde. Nada frito, nada picante, NADA que no</text>
-<text x="1519" y="1063.0" font-size="11.0" font-weight="600" fill="#131A17">hayas comido antes.</text>
-<text x="1787" y="1022.2" font-size="11.0" font-weight="600" fill="#131A17">Huevo, lácteos, frito, fibra y cualquier</text>
-<text x="1787" y="1035.8" font-size="11.0" font-weight="600" fill="#131A17">alimento nuevo. Y NO pases de 6 geles: son 60</text>
-<text x="1787" y="1049.4" font-size="11.0" font-weight="600" fill="#131A17">mg de cafeína cada uno.</text>
-<line x1="170" y1="96" x2="170" y2="1089" stroke="#D3D9D2" stroke-width="1"/>
-<line x1="438" y1="96" x2="438" y2="1089" stroke="#D3D9D2" stroke-width="1"/>
-<line x1="706" y1="96" x2="706" y2="1089" stroke="#D3D9D2" stroke-width="1"/>
-<line x1="974" y1="96" x2="974" y2="1089" stroke="#D3D9D2" stroke-width="1"/>
-<line x1="1242" y1="96" x2="1242" y2="1089" stroke="#D3D9D2" stroke-width="1"/>
-<line x1="1510" y1="96" x2="1510" y2="1089" stroke="#D3D9D2" stroke-width="1"/>
-<line x1="1778" y1="96" x2="1778" y2="1089" stroke="#D3D9D2" stroke-width="1"/>
-<line x1="2046" y1="96" x2="2046" y2="1089" stroke="#D3D9D2" stroke-width="1"/>
-<line x1="22" y1="1089.2" x2="2046" y2="1089.2" stroke="#131A17" stroke-width="1.5"/>
-<rect x="22" y="96" width="2024" height="993" fill="none" stroke="#D3D9D2"/>
-<text x="22" y="1115" font-size="10.5" fill="#5C6764">Bebida deportiva casera (1 L): 1 L de agua + 65 g de panela o azúcar + 1,5 g de sal (¼ de cucharadita rasa) + el jugo de 1 limón. · Cuajada = caseína.</text>
-<text x="22" y="1131" font-size="10.5" fill="#5C6764">Domingo: despertar 2:45 · desayuno 3:00 · salir de Guarne 3:30 · llegar 4:10 · gel 4:45 · salida 5:00. Nada nuevo. Sal 15 s/km más lento de lo que crees.</text>
+<text x="1787" y="904.6" font-size="11.0" font-weight="400" fill="#2C3835">durante: 400-600 ml/h de TU suero hidratante</text>
+<text x="1787" y="918.2" font-size="11.0" font-weight="400" fill="#2C3835">(el de siempre)</text>
+<text x="1787" y="931.8" font-size="11.0" font-weight="400" fill="#2C3835">lleva 2-3 sobres para rearmar en los</text>
+<text x="1787" y="945.4" font-size="11.0" font-weight="400" fill="#2C3835">avituallamientos</text>
+<text x="1787" y="959.0" font-size="11.0" font-weight="400" fill="#2C3835">NUNCA ganes peso durante la carrera</text>
+<line x1="22" y1="971.6" x2="2046" y2="971.6" stroke="#D3D9D2" stroke-width="1"/>
+<text x="31" y="990.6" font-size="11" font-weight="700" fill="#131A17">Suplementos</text>
+<text x="179" y="990.6" font-size="11.0" font-weight="400" fill="#2C3835">Creatina 5 g</text>
+<text x="179" y="1004.2" font-size="11.0" font-weight="400" fill="#2C3835">Omega 3</text>
+<text x="179" y="1017.8" font-size="11.0" font-weight="400" fill="#2C3835">Magnesio 300-400 mg (noche)</text>
+<text x="447" y="990.6" font-size="11.0" font-weight="400" fill="#2C3835">Creatina 5 g</text>
+<text x="447" y="1004.2" font-size="11.0" font-weight="400" fill="#2C3835">Omega 3</text>
+<text x="447" y="1017.8" font-size="11.0" font-weight="400" fill="#2C3835">Magnesio</text>
+<text x="715" y="990.6" font-size="11.0" font-weight="400" fill="#2C3835">Creatina 5 g</text>
+<text x="715" y="1004.2" font-size="11.0" font-weight="400" fill="#2C3835">Omega 3</text>
+<text x="715" y="1017.8" font-size="11.0" font-weight="400" fill="#2C3835">Magnesio</text>
+<text x="983" y="990.6" font-size="11.0" font-weight="400" fill="#2C3835">Creatina 5 g</text>
+<text x="983" y="1004.2" font-size="11.0" font-weight="400" fill="#2C3835">Omega 3</text>
+<text x="983" y="1017.8" font-size="11.0" font-weight="400" fill="#2C3835">Magnesio</text>
+<text x="1251" y="990.6" font-size="11.0" font-weight="400" fill="#2C3835">Creatina 5 g</text>
+<text x="1251" y="1004.2" font-size="11.0" font-weight="400" fill="#2C3835">Omega 3</text>
+<text x="1251" y="1017.8" font-size="11.0" font-weight="400" fill="#2C3835">Magnesio</text>
+<text x="1519" y="990.6" font-size="11.0" font-weight="400" fill="#2C3835">Creatina 5 g</text>
+<text x="1519" y="1004.2" font-size="11.0" font-weight="400" fill="#2C3835">Omega 3</text>
+<text x="1519" y="1017.8" font-size="11.0" font-weight="400" fill="#2C3835">Magnesio</text>
+<text x="1519" y="1031.4" font-size="11.0" font-weight="400" fill="#2C3835">NADA nuevo</text>
+<text x="1787" y="990.6" font-size="11.0" font-weight="400" fill="#2C3835">TOPE DE CAFEÍNA: 6 UP GEL = 360 mg (4,3</text>
+<text x="1787" y="1004.2" font-size="11.0" font-weight="400" fill="#2C3835">mg/kg). Tu café de las 2:45 aparte. NO tomes</text>
+<text x="1787" y="1017.8" font-size="11.0" font-weight="400" fill="#2C3835">un séptimo gel: llevarías más del doble de lo</text>
+<text x="1787" y="1031.4" font-size="11.0" font-weight="400" fill="#2C3835">que has probado nunca.</text>
+<rect x="22" y="1044" width="2024" height="86" fill="#EDF0EC" opacity="0.75"/>
+<line x1="22" y1="1044.0" x2="2046" y2="1044.0" stroke="#D3D9D2" stroke-width="1"/>
+<text x="31" y="1063.0" font-size="11" font-weight="700" fill="#131A17">QUÉ EVITAR</text>
+<text x="179" y="1063.0" font-size="11.0" font-weight="600" fill="#131A17">Alcohol</text>
+<text x="447" y="1063.0" font-size="11.0" font-weight="600" fill="#131A17">Alcohol</text>
+<text x="715" y="1063.0" font-size="11.0" font-weight="600" fill="#131A17">Alcohol</text>
+<text x="715" y="1076.6" font-size="11.0" font-weight="600" fill="#131A17">empezar a bajar fibra</text>
+<text x="983" y="1063.0" font-size="11.0" font-weight="600" fill="#131A17">Alcohol</text>
+<text x="983" y="1076.6" font-size="11.0" font-weight="600" fill="#131A17">frito</text>
+<text x="983" y="1090.2" font-size="11.0" font-weight="600" fill="#131A17">exceso de grasa (compite con los carbos)</text>
+<text x="983" y="1103.8" font-size="11.0" font-weight="600" fill="#131A17">nueces y frutos secos</text>
+<text x="1251" y="1063.0" font-size="11.0" font-weight="600" fill="#131A17">Alcohol</text>
+<text x="1251" y="1076.6" font-size="11.0" font-weight="600" fill="#131A17">frito</text>
+<text x="1251" y="1090.2" font-size="11.0" font-weight="600" fill="#131A17">legumbres</text>
+<text x="1251" y="1103.8" font-size="11.0" font-weight="600" fill="#131A17">verduras crudas</text>
+<text x="1251" y="1117.4" font-size="11.0" font-weight="600" fill="#131A17">brócoli, coliflor, repollo (gases)</text>
+<text x="1519" y="1063.0" font-size="11.0" font-weight="600" fill="#131A17">TODA la fibra: verduras, legumbres,</text>
+<text x="1519" y="1076.6" font-size="11.0" font-weight="600" fill="#131A17">integrales, cáscaras, semillas, el jugo</text>
+<text x="1519" y="1090.2" font-size="11.0" font-weight="600" fill="#131A17">verde. Nada frito, nada picante, NADA que no</text>
+<text x="1519" y="1103.8" font-size="11.0" font-weight="600" fill="#131A17">hayas comido antes.</text>
+<text x="1787" y="1063.0" font-size="11.0" font-weight="600" fill="#131A17">Huevo, lácteos, frito, fibra y cualquier</text>
+<text x="1787" y="1076.6" font-size="11.0" font-weight="600" fill="#131A17">alimento nuevo. Y NO pases de 6 geles: son 60</text>
+<text x="1787" y="1090.2" font-size="11.0" font-weight="600" fill="#131A17">mg de cafeína cada uno.</text>
+<line x1="170" y1="96" x2="170" y2="1130" stroke="#D3D9D2" stroke-width="1"/>
+<line x1="438" y1="96" x2="438" y2="1130" stroke="#D3D9D2" stroke-width="1"/>
+<line x1="706" y1="96" x2="706" y2="1130" stroke="#D3D9D2" stroke-width="1"/>
+<line x1="974" y1="96" x2="974" y2="1130" stroke="#D3D9D2" stroke-width="1"/>
+<line x1="1242" y1="96" x2="1242" y2="1130" stroke="#D3D9D2" stroke-width="1"/>
+<line x1="1510" y1="96" x2="1510" y2="1130" stroke="#D3D9D2" stroke-width="1"/>
+<line x1="1778" y1="96" x2="1778" y2="1130" stroke="#D3D9D2" stroke-width="1"/>
+<line x1="2046" y1="96" x2="2046" y2="1130" stroke="#D3D9D2" stroke-width="1"/>
+<line x1="22" y1="1130.0" x2="2046" y2="1130.0" stroke="#131A17" stroke-width="1.5"/>
+<rect x="22" y="96" width="2024" height="1034" fill="none" stroke="#D3D9D2"/>
+<text x="22" y="1156" font-size="10.5" fill="#5C6764">Bebida deportiva casera (1 L): 1 L de agua + 65 g de panela o azúcar + 1,5 g de sal (¼ de cucharadita rasa) + el jugo de 1 limón. · Cuajada = caseína.</text>
+<text x="22" y="1172" font-size="10.5" fill="#5C6764">Domingo: despertar 2:45 · desayuno 3:00 · salir de Guarne 3:30 · llegar 4:10 · gel 4:45 · salida 5:00. Nada nuevo. Sal 15 s/km más lento de lo que crees.</text>
 </svg>
