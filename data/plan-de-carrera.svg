@@ -1,6 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 1022" width="760" height="1022" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
-<rect width="760" height="1022" fill="#FBFCFA"/>
-<rect x="0" y="0" width="760" height="104" fill="#131A17"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 1026" width="760" height="1026" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<rect width="760" height="1026" fill="#FBFCFA"/><rect width="760" height="104" fill="#131A17"/>
 <text x="28" y="42" font-size="24" font-weight="700" fill="#FBFCFA">Plan de carrera · domingo 6 sep</text>
 <text x="28" y="66" font-size="13" fill="#9FB0AC">Maratón Medellín · salida 5:00 AM · Parque de las Luces</text>
 <text x="28" y="88" font-size="13" font-weight="700" fill="#E0855A">REGLA DEL RELOJ: en punto = GEL · y media = BOCADILLO</text>
@@ -52,7 +51,7 @@
 <line x1="20" y1="468" x2="740" y2="468" stroke="#D3D9D2"/>
 <rect x="20" y="468" width="4" height="38" fill="#0E4F52"/>
 <text x="36" y="494" font-size="16" font-weight="700" fill="#131A17">8:30</text>
-<text x="126" y="494" font-size="14" font-weight="600" fill="#0E4F52">Bocadillo veleño 30 g + 2 dátiles</text>
+<text x="126" y="494" font-size="14" font-weight="600" fill="#0E4F52">Bocadillo 30 g + 2 dátiles</text>
 <text x="610" y="494" font-size="13" fill="#5C6764">172 g</text>
 <text x="718" y="494" font-size="13" font-weight="400" fill="#5C6764" text-anchor="end">180 mg</text>
 <rect x="20" y="514" width="720" height="38" fill="#FAF0E7"/>
@@ -87,10 +86,10 @@
 <text x="126" y="724" font-size="15" font-weight="700" fill="#FBFCFA">META</text>
 <text x="28" y="774" font-size="13" font-weight="600" fill="#A6521E">NUNCA un séptimo gel. 6 geles = 360 mg de cafeína = 4,3 mg/kg.</text>
 <text x="28" y="797" font-size="13" font-weight="600" fill="#A6521E">Es ya 50 % más de lo máximo que has probado (4 geles = 240 mg).</text>
-<text x="28" y="820" font-size="13" font-weight="600" fill="#131A17">Termo con TU suero hidratante de siempre. Sorbos constantes, ~500 ml por hora.</text>
-<text x="28" y="843" font-size="13" font-weight="600" fill="#131A17">500 ml no cubren 6 h: lleva 2-3 sobres en el bolsillo y rearma en los puestos.</text>
-<text x="28" y="866" font-size="13" font-weight="600" fill="#131A17">Los 248 g de sólidos van solos: el suero hidrata, no alimenta. NO le eches panela.</text>
+<text x="28" y="820" font-size="13" font-weight="600" fill="#131A17">Termo con TU suero hidratante. Sorbos constantes, ~500 ml por hora.</text>
+<text x="28" y="843" font-size="13" font-weight="600" fill="#131A17">500 ml no cubren 6 h: lleva 2-3 sobres y rearma en los puestos.</text>
+<text x="28" y="866" font-size="13" font-weight="600" fill="#131A17">Los 248 g de sólidos van solos: el suero hidrata, no alimenta.</text>
 <text x="28" y="889" font-size="13" font-weight="600" fill="#131A17">Si te empalaga el dulce: enjuaga con agua sola y sigue. NO dejes de comer.</text>
-<text x="28" y="912" font-size="13" font-weight="600" fill="#0E4F52">km 0-10: 15-20 s/km MÁS LENTO de lo que te pida el cuerpo. Que te adelanten.</text>
+<text x="28" y="912" font-size="13" font-weight="600" fill="#0E4F52">km 0-10: 15-20 s/km MÁS LENTO de lo que te pida el cuerpo.</text>
 <text x="28" y="949" font-size="12" fill="#5C6764">Desayuno 3:00 AM · 120 g de pan + 60 g de arequipe + café + 400 ml de agua con sal, limón y 40 g de panela = 132 g CHO</text>
 </svg>
