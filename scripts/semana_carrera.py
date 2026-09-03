@@ -161,13 +161,40 @@ R["QUÉ EVITAR"] = [
  "Huevo, lácteos, frito, fibra y cualquier alimento nuevo. Y NO pases de 6 geles.",
 ]
 
+# Opciones para llegar al MISMO macro con otros alimentos (dias de carga).
+# Muchas vienen del plan del nutricionista: son vehiculos de carbohidrato de
+# muy bajo residuo, mejores que el arroz para un colon sensible.
+OPC = {
+ ("Desayuno (8:00 AM)",3): "o 100 g de crema de arroz con 2 cdas de miel + banano · o 3 tostadas con mermelada sin semillas",
+ ("Desayuno (8:00 AM)",4): "o 100 g de crema de arroz con miel + banano + 250 ml de jugo de uva colado",
+ ("Desayuno (8:00 AM)",5): "o 100 g de crema de arroz con miel + banano · o 4 tostadas con jalea + isotónica",
+ ("Media mañana (10:30)",3): "o 5 galletas de arroz inflado con mermelada · o 500 ml de isotónica + 2 tostadas",
+ ("Media mañana (10:30)",4): "o 80 g de cereal de arroz (Nestum) en agua con miel · o 4 tostadas con jalea + 500 ml de isotónica",
+ ("Media mañana (10:30)",5): "o 4 tostadas con mermelada sin semillas + 500 ml de bebida deportiva",
+ ("Almuerzo (12:30)",3): "el arroz vale igual como pasta blanca cocida (mismo peso) o puré de papa sin cáscara (×1,6 el peso)",
+ ("Almuerzo (12:30)",4): "o 250 g de pasta blanca cocida + puré de papa · sazona SOLO con sal: nada de ajo, cebolla ni comino",
+ ("Almuerzo (12:30)",5): "o 250 g de puré de papa + 1 gelatina · pollo desmechado al vapor, solo sal",
+ ("Media tarde (16:00)",3): "o 500 ml de isotónica + 4 galletas María · o 80 g de cereal de arroz con miel",
+ ("Media tarde (16:00)",4): "o batido de 80 g de cereal de arroz con miel + 500 ml de bebida deportiva",
+ ("Media tarde (16:00)",5): "o 500 ml con electrolitos + 4 galletas de agua con miel",
+ ("Cena (19:00)",3): "el arroz vale igual como 250 g de pasta blanca cocida o 400 g de puré de papa",
+ ("Cena (19:00)",4): "o 250 g de pasta blanca con un chorrito de aceite de oliva + tilapia",
+ ("Cena (19:00)",5): "o 250 g de puré de papa sin piel + tilapia al vapor + agua de panela colada",
+ ("Antes de dormir",3): "o 250 ml de agua de panela + 2 tajadas de pan",
+ ("Antes de dormir",4): "o 250 ml de bebida deportiva + 2 tajadas de pan con miel",
+ ("Pre-entreno (5:40 AM)",3): "o 1 banano grande + café · o 2 tostadas con miel",
+}
+for (_f,_d),_t in OPC.items():
+    _c = R[_f][_d]
+    if isinstance(_c, tuple): R[_f][_d] = (_c[0], _c[1], _t)
+
 ORDEN = ["Entrenamiento","Pre-entreno (5:40 AM)","Jugo verde (7:30 AM)","Desayuno (8:00 AM)",
          "Media mañana (10:30)","Almuerzo (12:30)","Media tarde (16:00)","Cena (19:00)",
          "Antes de dormir","Hidratación","Suplementos","QUÉ EVITAR"]
 COMIDAS = ["Pre-entreno (5:40 AM)","Desayuno (8:00 AM)","Media mañana (10:30)",
            "Almuerzo (12:30)","Media tarde (16:00)","Cena (19:00)","Antes de dormir"]
 
-def nivel(cel, i):   # 0 = piso, 1 = objetivo
+def nivel(cel, i):   # 0 = piso, 1 = meta  (el 3er elemento, si existe, son opciones)
     return cel[i] if isinstance(cel, tuple) else cel
 
 # ---------- comprobacion de totales ----------
@@ -192,7 +219,14 @@ with open(path,"w",newline="",encoding="utf-8-sig") as f:
     w.writerow(["FASE"]+FASE)
     w.writerow(["OBJETIVO DE CARBOHIDRATOS"]+[f"PISO: {o[0]} || OBJETIVO: {o[1]}" if isinstance(o,tuple) else o for o in OBJ])
     for k in ORDEN:
-        w.writerow([k]+[f"PISO: {c[0]} || OBJETIVO: {c[1]}" if isinstance(c,tuple) else c for c in R[k]])
+        fila = []
+        for c in R[k]:
+            if isinstance(c, tuple):
+                t = f"PISO: {c[0]} || META: {c[1]}"
+                if len(c) > 2: t += f" || O BIEN: {c[2]}"
+            else: t = c
+            fila.append(t)
+        w.writerow([k]+fila)
 print("\nescrito", path)
 
 # ==========================  SVG de la semana  ==========================
@@ -214,13 +248,16 @@ def wrap(t, w=CPL):
     return out
 
 def lineas(cel):
-    """Numero de lineas que ocupa una celda (dos niveles cuentan doble + separador)."""
-    if isinstance(cel, tuple): return len(wrap(cel[0], CPL-5)) + len(wrap(cel[1], CPL-5)) + 1
+    """Lineas que ocupa una celda: cada nivel mas su separador, y las opciones si las hay."""
+    if isinstance(cel, tuple):
+        n = sum(len(wrap(x, CPL-5)) for x in cel[:2]) + 1
+        if len(cel) > 2: n += len(wrap(cel[2], CPL-5)) + 0.6
+        return n
     return len(wrap(cel))
 
 alturas = [max(max(lineas(c) for c in R[k])*LH + 2*PAD, 30) for k in ORDEN]
 W = MARGIN_L*2 + LAB_W + COL_W*7
-FOOT = 128
+FOOT = 250
 H = MARGIN_T + HEAD_H + SUB_H + sum(alturas) + FOOT
 
 s = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W:.0f} {H:.0f}" width="{W:.0f}" height="{H:.0f}" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">',
@@ -264,11 +301,15 @@ for k,alto in zip(ORDEN, alturas):
     for i,cel in enumerate(R[k]):
         cx = x0+i*COL_W+PAD; ty = y+PAD+10
         if isinstance(cel, tuple):
-            for lab,txt_,bg,fg in (("PISO",cel[0],"#5C6764","#3A4644"),("META",cel[1],"#A6521E","#8A4318")):
-                s.append(f'<rect x="{cx:.0f}" y="{ty-8:.1f}" width="30" height="11" fill="{bg}"/>')
-                s.append(f'<text x="{cx+15:.0f}" y="{ty:.1f}" font-size="7.6" font-weight="700" fill="#FBFCFA" text-anchor="middle" letter-spacing="0.4">{lab}</text>')
+            filas = [("PISO",cel[0],"#5C6764","#3A4644"),("META",cel[1],"#A6521E","#8A4318")]
+            if len(cel) > 2: filas.append(("O BIEN",cel[2],"#0E4F52","#12615F"))
+            for lab,txt_,bg,fg in filas:
+                w_ = 30 if lab != "O BIEN" else 40
+                s.append(f'<rect x="{cx:.0f}" y="{ty-8:.1f}" width="{w_}" height="11" fill="{bg}"/>')
+                s.append(f'<text x="{cx+w_/2:.0f}" y="{ty:.1f}" font-size="7.6" font-weight="700" fill="#FBFCFA" text-anchor="middle" letter-spacing="0.4">{lab}</text>')
+                pesos = {"PISO":"400","META":"600","O BIEN":"400"}
                 for j,l in enumerate(wrap(txt_, CPL-5)):
-                    s.append(f'<text x="{cx+35:.0f}" y="{ty+j*LH:.1f}" font-size="{FS}" fill="{fg}" font-weight="{"400" if lab=="PISO" else "600"}">{html.escape(l)}</text>')
+                    s.append(f'<text x="{cx+w_+5:.0f}" y="{ty+j*LH:.1f}" font-size="{FS if lab!="O BIEN" else FS-0.6}" fill="{fg}" font-weight="{pesos[lab]}" font-style="{"italic" if lab=="O BIEN" else "normal"}">{html.escape(l)}</text>')
                 ty += len(wrap(txt_, CPL-5))*LH + LH*0.5
         else:
             for j,l in enumerate(wrap(cel)):
@@ -280,21 +321,39 @@ for i in range(8):
 s.append(f'<line x1="{MARGIN_L}" y1="{y:.1f}" x2="{W-MARGIN_L}" y2="{y:.1f}" stroke="#131A17" stroke-width="1.5"/>')
 s.append(f'<rect x="{MARGIN_L}" y="{yh:.0f}" width="{W-2*MARGIN_L:.0f}" height="{y-yh:.0f}" fill="none" stroke="#D3D9D2"/>')
 
-# panel: los mismos carbos ocupando menos estomago
-y += 26
-s.append(f'<text x="{MARGIN_L}" y="{y:.0f}" font-size="13" font-weight="700" fill="#131A17">¿Mucho arroz? Los mismos 126 g de carbohidratos, en distintos formatos:</text>')
-y += 20
+# panel 1: banco de intercambios · cada modulo = 25 g de carbohidrato
+y += 28
+s.append(f'<text x="{MARGIN_L}" y="{y:.0f}" font-size="14" font-weight="700" fill="#131A17">Banco de intercambios · cada uno de estos = <tspan fill="#A6521E">25 g de carbohidrato</tspan></text>')
+s.append(f'<text x="{MARGIN_L+560}" y="{y:.0f}" font-size="12" fill="#5C6764">Suma módulos hasta llegar al número de cada casilla. Da igual de dónde vengan.</text>')
+y += 18
+MOD = [("90 g","arroz blanco cocido"),("100 g","pasta blanca cocida"),("150 g","puré de papa"),
+       ("85 g","plátano maduro cocido"),("50 g","pan blanco · 1,7 tajadas"),("31 g","crema de arroz en seco"),
+       ("32 g","cereal de arroz · Nestum"),("35 g","bocadillo · 1 unidad"),
+       ("42 g","arequipe · 2 cdas"),("31 g","miel · 1,5 cdas"),("130 g","banano · 1 grande"),("180 g","gelatina"),
+       ("280 ml","agua de panela"),("420 ml","bebida deportiva"),("170 ml","jugo de uva colado"),("6","galletas María")]
+cols, mw = 8, (W-2*MARGIN_L-7*6)/8
+for i,(gr,nom) in enumerate(MOD):
+    bx = MARGIN_L + (i%cols)*(mw+6); by = y + (i//cols)*46
+    s.append(f'<rect x="{bx:.0f}" y="{by:.0f}" width="{mw:.0f}" height="40" fill="#F4F6F3" stroke="#D3D9D2"/>')
+    s.append(f'<text x="{bx+9:.0f}" y="{by+18:.0f}" font-size="15" font-weight="700" fill="#0E4F52">{gr}</text>')
+    s.append(f'<text x="{bx+9:.0f}" y="{by+32:.0f}" font-size="9.5" fill="#5C6764">{nom}</text>')
+y += 2*46 + 16
+
+# panel 2: por que el arroz es el peor vehiculo
+s.append(f'<text x="{MARGIN_L}" y="{y:.0f}" font-size="14" font-weight="700" fill="#131A17">¿Mucho arroz? Los mismos 126 g de carbohidratos, en distintos formatos:</text>')
+y += 18
 EQUIV = [("arroz blanco cocido","450 g","#8A4318"),("plátano maduro cocido","420 g","#5C6764"),
          ("pan blanco tajado","250 g","#5C6764"),("arequipe","210 g","#0E4F52"),
          ("bocadillo veleño","175 g","#0E4F52"),("panela disuelta en agua","140 g","#0E4F52")]
-bw = (W-2*MARGIN_L-6*8)/6
+bw = (W-2*MARGIN_L-5*8)/6
 for i,(nom,gr,col) in enumerate(EQUIV):
     bx = MARGIN_L + i*(bw+8)
-    s.append(f'<rect x="{bx:.0f}" y="{y:.0f}" width="{bw:.0f}" height="46" fill="#F4F6F3" stroke="#D3D9D2"/>')
+    s.append(f'<rect x="{bx:.0f}" y="{y:.0f}" width="{bw:.0f}" height="44" fill="#F4F6F3" stroke="#D3D9D2"/>')
     s.append(f'<text x="{bx+10:.0f}" y="{y+21:.0f}" font-size="17" font-weight="700" fill="{col}">{gr}</text>')
-    s.append(f'<text x="{bx+10:.0f}" y="{y+37:.0f}" font-size="10.5" fill="#5C6764">{nom}</text>')
-y += 64
-s.append(f'<text x="{MARGIN_L}" y="{y:.0f}" font-size="11.5" fill="#5C6764">Si no te cabe el arroz, cámbialo por líquido y por dulces densos: el agua de panela y el bocadillo meten los mismos carbos en la tercera parte de volumen.</text>')
+    s.append(f'<text x="{bx+10:.0f}" y="{y+36:.0f}" font-size="10" fill="#5C6764">{nom}</text>')
+y += 62
+s.append(f'<text x="{MARGIN_L}" y="{y:.0f}" font-size="11.5" fill="#5C6764">El arroz cocido es 72 % agua: te llena el estómago con puro volumen. Si no te cabe, cámbialo por líquido (agua de panela, jugo de uva colado, isotónica) o por dulces densos (bocadillo, arequipe, miel).</text>')
+s.append(f'<text x="{MARGIN_L}" y="{y+18:.0f}" font-size="11.5" fill="#5C6764">Proteína en los días de carga: 1,2-1,4 g/kg (100-115 g), no más. La proteína y la grasa le quitan sitio a los carbohidratos. Sazona solo con sal: nada de ajo, cebolla ni comino.</text>')
 s.append('</svg>')
 open(os.path.join(BASE,"data","semana-carrera.svg"),"w",encoding="utf-8").write("\n".join(s))
 print("escrito data/semana-carrera.svg", f"({W:.0f}x{H:.0f})")
