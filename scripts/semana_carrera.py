@@ -37,7 +37,7 @@ def C(items, extra="", nota=""):
     pro = sum(F[a][2]*g/F[a][0] for a,g in items)
     s = " + ".join(f"{NOMBRE[a]} {g:g} g" for a,g in items)
     if extra: s = (s + " + " if s else "") + extra
-    s += f" · {round(cho)} g CHO" + (f", {round(pro)} g prot" if pro >= 15 else "")
+    s += f" · {round(cho)} g CHO" + (f", {round(pro)} g prot" if pro >= 10 else "")
     if nota: s += f" · {nota}"
     return s
 
@@ -82,12 +82,12 @@ R["Desayuno (8:00 AM)"] = [
  C([("huevo",150),("arepa",100),("platano",150)], "café"),
  C([("huevo",150),("arepa",100),("platano",150)], "café"),
  C([("huevo",100),("arepa",100),("platano",200),("panela",20)], "café"),
- (C([("arepa",100),("arequipe",20),("platano",200),("panela",20)], "café"),
-  C([("arepa",150),("arequipe",40),("platano",200),("panela",20)], "café")),
- (C([("arepa",200),("arequipe",20),("platano",200),("panela",20)], "café"),
-  C([("arepa",200),("arequipe",40),("platano",200),("panela",20)], "café")),
- (C([("arepa",100),("arequipe",40),("platano",200),("panela",20)], "café"),
-  C([("arepa",200),("arequipe",40),("platano",200)], "café")),
+ (C([("huevo",150),("arepa",100),("arequipe",20),("platano",200),("panela",20)], "café"),
+  C([("huevo",150),("arepa",150),("arequipe",40),("platano",200),("panela",20)], "café")),
+ (C([("huevo",150),("arepa",200),("arequipe",20),("platano",200),("panela",20)], "café"),
+  C([("huevo",150),("arepa",200),("arequipe",40),("platano",200),("panela",20)], "café")),
+ (C([("huevo",150),("arepa",100),("arequipe",40),("platano",200),("panela",20)], "café"),
+  C([("huevo",150),("arepa",200),("arequipe",40),("platano",200)], "café")),
  "3:00 AM (2 h antes) · TU RUTINA: " + C([("pan",120),("arequipe",60)], "café solo + 400 ml de agua con sal, limón y 40 g de panela", "en total 132 g CHO · nada nuevo"),
 ]
 R["Media mañana (10:30)"] = [
@@ -103,10 +103,10 @@ R["Almuerzo (12:30)"] = [
  C([("pollo",150),("arroz",250),("papa",150)], "ensalada + ½ aguacate"),
  C([("pollo",150),("arroz",250),("papa",150)], "ensalada + ½ aguacate"),
  C([("pollo",180),("arroz",300),("platano",150)], "verduras cocidas: calabacín + zanahoria + habichuela"),
- (C([("pollo",150),("arroz",250),("platano",150)], "calabacín cocido 100 g"),
-  C([("pollo",150),("arroz",350),("platano",100)], "calabacín cocido 100 g")),
- (C([("pollo",150),("arroz",300),("platano",200)], "calabacín cocido 100 g"),
-  C([("pollo",150),("arroz",400),("platano",150)], "calabacín cocido 100 g")),
+ (C([("pollo",100),("arroz",250),("platano",150)], "calabacín cocido 100 g"),
+  C([("pollo",100),("arroz",350),("platano",100)], "calabacín cocido 100 g")),
+ (C([("pollo",100),("arroz",300),("platano",200)], "calabacín cocido 100 g"),
+  C([("pollo",100),("arroz",400),("platano",150)], "calabacín cocido 100 g")),
  (C([("pollo",150),("arroz",300),("papa",200)], "", "CERO verduras"),
   C([("pollo",150),("arroz",450),("papa",200)], "", "CERO verduras · última comida grande")),
 ]
@@ -123,20 +123,20 @@ R["Cena (19:00)"] = [
  C([("pescado",180),("papa",250)], "verduras cocidas"),
  C([("pescado",180),("papa",250)], "verduras cocidas"),
  C([("pescado",180),("arroz",250)], "calabacín + zanahoria + ahuyama cocidos"),
- (C([("pescado",150),("arroz",250),("papa",150)], "calabacín 100 g"),
-  C([("pescado",150),("arroz",300),("papa",150)], "calabacín 100 g")),
- (C([("pescado",150),("arroz",300),("platano",150)], "", "CERO verduras desde aquí"),
-  C([("pescado",150),("arroz",400),("platano",200)], "", "CERO verduras desde aquí")),
- ("18:30 · " + C([("pollo",120),("arroz",250),("platano",150)], "", "CERO fibra, CERO grasa"),
-  "18:30 · " + C([("pollo",120),("arroz",300),("platano",200)], "", "CERO fibra, CERO grasa")),
+ (C([("pescado",100),("arroz",250),("papa",150)], "calabacín 100 g"),
+  C([("pescado",100),("arroz",300),("papa",150)], "calabacín 100 g")),
+ (C([("pescado",100),("arroz",300),("platano",150)], "", "CERO verduras desde aquí"),
+  C([("pescado",100),("arroz",400),("platano",200)], "", "CERO verduras desde aquí")),
+ ("18:30 · " + C([("pollo",100),("arroz",250),("platano",150)], "", "CERO fibra, CERO grasa"),
+  "18:30 · " + C([("pollo",100),("arroz",300),("platano",200)], "", "CERO fibra, CERO grasa")),
  "Libre. Come y bebe lo que te pida el cuerpo.",
 ]
 R["Antes de dormir"] = [
  C([("cuajada",200)], "", "la cuajada ES caseína"),
  C([("cuajada",200)]),
  C([("cuajada",200),("banano",120)]),
- (C([("cuajada",200),("banano",120)]), C([("cuajada",250),("banano",120)])),
- (C([("cuajada",200),("banano",120)]), C([("cuajada",250),("banano",120)])),
+ (C([("cuajada",200),("banano",120)]), C([("cuajada",200),("banano",120)])),
+ (C([("cuajada",200),("banano",120)]), C([("cuajada",200),("banano",120)])),
  C([("aguapanela",300)], "", "nada más · a la cama a las 20:00"),
  "—",
 ]
@@ -199,7 +199,7 @@ def nivel(cel, i):   # 0 = piso, 1 = meta  (el 3er elemento, si existe, son opci
 
 # ---------- comprobacion de totales ----------
 print("Carbohidratos por día (calculados, no estimados):\n")
-print(f"{'':<16} {'PISO':>7} {'OBJETIVO':>9}   objetivo declarado")
+print(f"{'':<16} {'PISO':>7} {'META':>9}   |  proteína (meta 100-115 g)")
 for d in range(7):
     tot = []
     for k in (0,1):
@@ -208,8 +208,14 @@ for d in range(7):
             m = re.search(r"· (\d+) g CHO", nivel(R[c][d], k))
             if m: t += int(m.group(1))
         tot.append(t)
-    o = OBJ[d]; o = f"{o[0]} / {o[1]}" if isinstance(o,tuple) else o
-    print(f"{DIAS[d]:<16} {tot[0]:>5} g {tot[1]:>7} g   {o}")
+    pro = []
+    for k in (0,1):
+        t = 0
+        for c in COMIDAS:
+            m = re.search(r"(\d+) g prot", nivel(R[c][d], k))
+            if m: t += int(m.group(1))
+        pro.append(t)
+    print(f"{DIAS[d]:<16} {tot[0]:>5} g {tot[1]:>7} g   |  prot {pro[0]:>3}-{pro[1]:>3} g")
 
 # ---------- CSV ----------
 path = os.path.join(BASE,"data","semana-carrera-nutricion.csv")
