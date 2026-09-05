@@ -97,7 +97,7 @@ R["Media mañana (10:30)"] = [
  (C([("bocadillo",60)]), C([("bocadillo",60),("pan",60)])),
  (C([("bocadillo",60),("aguapanela",300)]), C([("bocadillo",120),("pan",60),("arequipe",20)])),
  (C([("bocadillo",60),("aguapanela",300)]), C([("pan",120),("arequipe",40),("platano",150)])),
- "3:30 AM salir de Guarne · 4:10 llegar · 4:45 AM: 1 gel + sorbo de agua",
+ "3:30 AM salir de Guarne · 4:10 llegar · 4:45 AM: activación suave 5 min, ropa y vaselina · SIN gel todavía (el nº1 va a las 6:00, ya en carrera)",
 ]
 R["Almuerzo (12:30)"] = [
  C([("pollo",150),("arroz",250),("papa",150)], "ensalada + ½ aguacate"),
