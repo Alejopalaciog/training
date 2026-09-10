@@ -25,6 +25,9 @@
 | 06 | [Registro y alertas](docs/06-registro-y-alertas.md) | Qué medir, semáforo semanal, cómo retomar tras parar, fechas clave |
 | 07 | [**Glosario**](docs/07-glosario.md) | Qué significa cada término: umbral, RM, rectas, fartlek, VO2max, RIR, negative split… |
 | 08 | [Mensaje para tu entrenador](docs/08-mensaje-para-tu-entrenador.md) | Texto listo para copiar y pegar, con el porqué de cada ajuste |
+| 09 | [**Retro: primera maratón**](docs/09-retro-maraton-1.md) | Resultado 5:48, los 6 errores reportados uno por uno, diagnóstico y acción para el ciclo 2 |
+| 10 | [**La ruta a 100 km**](docs/10-ruta-a-100km.md) | Por qué no ir directo, las etapas propuestas (50K → 50 millas/80K → 100K), ~20 meses |
+| 11 | [**Plan hacia el primer 50 K**](docs/11-plan-ultra-50k.md) | 28 semanas, fondos consecutivos de fin de semana, power-hiking, nutrición con comida real |
 
 ## Otros archivos
 
@@ -34,6 +37,7 @@
 | `plan-maraton.html` | La página consultable (la misma que está publicada) |
 | `data/plan.json` | El plan en datos: semanas, días, ritmos. Lo consumen los generadores |
 | `data/semana-carrera-nutricion.csv` | La tabla de tu amigo, corregida y adaptada a la semana de carrera |
+| `data/plan_ultra.json` | El plan hacia el primer 50K en datos: semanas, fondos de sábado y domingo |
 
 ## Empieza por aquí
 
@@ -54,8 +58,13 @@
 El calendario y las tablas de ritmos se generan desde un script, no están escritos a mano:
 
 ```bash
-npm run plan     # calendario + ritmos + docs/01 + fragmentos de la página
+npm run plan     # calendario + ritmos + docs/01 + fragmentos de la página (maratón)
 npm run pdf      # regenera Plan-Maraton-26-Semanas.pdf desde plan-maraton.html
+
+# plan hacia el primer 50K
+python3 scripts/generar_plan_ultra.py            # calendario -> data/plan_ultra.json
+python3 scripts/render_plan_ultra_md.py          # regenera docs/11-plan-ultra-50k.md
+python3 scripts/generar_plan_ultra.py --carrera 2027-04-11   # mover la fecha del 50K
 ```
 
 ### Cambiar la fecha de la carrera
