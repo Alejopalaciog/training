@@ -28,6 +28,7 @@
 | 09 | [**Retro: primera maratón**](docs/09-retro-maraton-1.md) | Resultado 5:48, los 6 errores reportados uno por uno, diagnóstico y acción para el ciclo 2 |
 | 10 | [**La ruta a 100 km**](docs/10-ruta-a-100km.md) | Por qué no ir directo, las etapas propuestas (50K → 50 millas/80K → 100K), ~20 meses |
 | 11 | [**Plan hacia el primer 50 K**](docs/11-plan-ultra-50k.md) | 28 semanas, fondos consecutivos de fin de semana, power-hiking, nutrición con comida real |
+| 12 | [**Preparación para jiujitsu**](docs/12-preparacion-jiujitsu-nov2026.md) | Torneo del 15 nov 2026, con gi, 2-4 combates: 8 semanas de gym + acondicionamiento específico, fondos de ultra en pausa |
 
 ## Otros archivos
 

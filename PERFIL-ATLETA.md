@@ -2,7 +2,7 @@
 
 > Documento de referencia para cualquier plan futuro (nutrición, fuerza, jiujitsu, siguiente carrera, etc.), no solo running. Pégalo al inicio de un chat nuevo, o adjunta este repositorio completo si trabajas en Claude Code — así el asistente parte con contexto real en vez de genérico.
 >
-> Última actualización: 16 de septiembre de 2026.
+> Última actualización: 16 de septiembre de 2026 (torneo de jiujitsu añadido el mismo día).
 
 ## Datos personales
 
@@ -59,6 +59,7 @@
 
 ## Objetivos activos (a fecha de este documento)
 
+0. **Torneo de jiujitsu, 15 de noviembre de 2026** — con gi, sin corte de peso (compite en 83-85 kg), espera 2-4 combates el mismo día. Bloque de 8 semanas en curso (gym 3×/semana con énfasis en agarre y explosividad, jiujitsu lunes y martes, carrera reducida a mantenimiento 2-3×/semana suave). Los fondos largos del plan de ultra están en pausa durante esta ventana — se retoman después, corriendo el calendario hacia adelante en vez de comprimir la base.
 1. **Progresión hacia un ultramaratón de 100 km**, en 3 etapas de ~20 meses en total: primer 50 K (objetivo 28 de marzo de 2027) → 50 millas/80 K (fin de 2027) → 100 K (2028).
 2. Plan detallado del primer bloque ya construido: 28 semanas, inicio 14 de septiembre de 2026, con fondos de fin de semana consecutivos (sábado largo + domingo con piernas cargadas) y power-hiking en subida.
 3. Existe también un ciclo de 26 semanas centrado en bajar la marca de maratón (construido antes de que se decidiera ir hacia ultra) — sigue disponible como ruta alternativa si cambia de prioridad.
