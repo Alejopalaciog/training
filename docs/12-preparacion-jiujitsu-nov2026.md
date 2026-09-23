@@ -59,6 +59,21 @@ Después del core: **el bloque que simula tu día de competencia** — 4 rondas 
 
 **La regla de esta semana:** ninguna lesión nueva. Con tu historial de tibial posterior, cualquier molestia rara en tobillo o pie el miércoles o jueves se trata con descanso total, no con "a ver si aguanta" — perder dos días de activación no cuesta nada; perder el torneo por una torcedura evitable sí.
 
+## Por qué el maratón no preparó tu "cardio" de jiujitsu (y qué sí funciona)
+
+Sentir que te quedas sin aire rodando, incluso recién salido de una maratón, no es contradictorio — son sistemas de energía distintos. El maratón es esfuerzo rítmico y aeróbico; rodar es intermitente, con **contracciones isométricas prolongadas** (agarres, aguantar posición bajo peso) que cortan el flujo de sangre al propio músculo que trabaja. Es un estímulo que el running no toca.
+
+**El mareo tiene una causa concreta, casi seguro no es de condición física:**
+- **Aguantar la respiración al agarrar o forcejear** (maniobra de Valsalva) baja la presión arterial de golpe al soltar.
+- **Hiperventilar por la adrenalina** del roll baja el CO2 en sangre y contrae los vasos cerebrales.
+
+Ambas se corrigen respirando de forma continua durante el esfuerzo — **exhala sostenido cuando agarras, nunca te la aguantes** — no con más volumen aeróbico. Si el mareo es fuerte, viene con dolor de pecho, o no mejora en unas semanas practicando esto, se revisa con un médico; con un debut de maratón reciente, un origen cardíaco es poco probable.
+
+**Ajustes concretos:**
+- Practicar la exhalación sostenida ya en los ejercicios de agarre del Gym B (dead hangs, farmer carry): exhala controlado mientras aguantas, no contengas el aire.
+- Meter rounds de "flow rolling" a 50-60 % de intensidad, con el único objetivo de mantenerte relajado y respirando bien bajo presión posicional — es una habilidad aparte de la fuerza.
+- El bloque del viernes (4 rondas de 5-6 min) debe ser a intensidad real — tan duro como se pueda sostener esos minutos —, no un ritmo aeróbico cómodo. Ahí se entrena el sistema anaeróbico que falta.
+
 ## Nutrición en esta ventana
 
 - **Sin déficit calórico.** Vuelve a mantenimiento (~3.000-3.100 kcal/día, el mismo número de partida del documento 04) mientras dure este bloque. El objetivo de 77 kg se retoma después del torneo.
